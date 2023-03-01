@@ -1,0 +1,250 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Activities	src/pages/Dashboard/Activities/index.js	/^export default function Activities() {$/;"	E
+App	src/App.js	/^export default function App() {$/;"	E
+AuthLayout	src/layouts/Auth.js	/^export default function AuthLayout({ background, children }) {$/;"	E
+Button	src/components/Dashboard/NavigationBar/NavigationButton.js	/^const Button = styled.button`$/;"	S
+Button	src/components/Form/Button.js	/^export default function Button({ variant='contained', children, ...props }) {$/;"	E
+CVC	src/pages/Dashboard/Payment/Components/PaymentArea.js	/^              CVC$/;"	V
+Certificate	src/pages/Dashboard/Certificate/index.js	/^export default function Certificate() {$/;"	E
+Container	src/components/Dashboard/NavigationBar/index.js	/^const Container = styled.div`$/;"	S
+Container	src/layouts/Dashboard.js	/^import { StyledContainer as Container } from '..\/components\/Auth';$/;"	I
+Container	src/pages/Dashboard/index.js	/^const Container = styled.div`$/;"	S
+Countdown	src/pages/Countdown/index.js	/^export default function Countdown() {$/;"	E
+CountdownBlock	src/pages/Countdown/Timer.js	/^const CountdownBlock = styled.div`$/;"	S
+CustomDatePicker	src/components/PersonalInformationForm/CustomDatePicker.js	/^export const CustomDatePicker = styled(DatePicker)`$/;"	E
+Dashboard	src/layouts/Dashboard.js	/^export default function Dashboard({ background, children }) {$/;"	E
+Dashboard	src/pages/Dashboard/index.js	/^export default function Dashboard() {$/;"	E
+Divider	src/pages/Countdown/Timer.js	/^const Divider = styled.div`$/;"	S
+Enroll	src/pages/Enroll/index.js	/^export default function Enroll() {$/;"	E
+ErrorMsg	src/components/PersonalInformationForm/ErrorMsg.js	/^export const ErrorMsg = styled.p`$/;"	E
+EventInfoProvider	src/contexts/EventInfoContext.js	/^export function EventInfoProvider({ children }) {$/;"	E
+FaBed	src/components/Dashboard/NavigationBar/index.js	/^  FaBed,$/;"	V
+FaCalendarWeek	src/components/Dashboard/NavigationBar/index.js	/^  FaCalendarWeek,$/;"	V
+FaCertificate	src/components/Dashboard/NavigationBar/index.js	/^  FaCertificate,$/;"	V
+FaFileContract	src/components/Dashboard/NavigationBar/index.js	/^  FaFileContract,$/;"	V
+FaMoneyBill	src/components/Dashboard/NavigationBar/index.js	/^  FaMoneyBill,$/;"	V
+FillSubscription	src/pages/Dashboard/FillSubscription/index.js	/^export default function FillSubscription() {$/;"	E
+FormControlWrapper	src/components/Form/Select.js	/^const FormControlWrapper = styled.section`$/;"	S
+FormWrapper	src/components/PersonalInformationForm/FormWrapper.js	/^export const FormWrapper = styled.form`$/;"	E
+Grid	src/components/Splash.js	/^const Grid = styled.div`$/;"	S
+Grid	src/pages/Countdown/Timer.js	/^const Grid = styled.div`$/;"	S
+Hotel	src/pages/Dashboard/Hotel/index.js	/^export default function Hotel() {$/;"	E
+Input	src/components/Form/Input.js	/^export default function Input({ mask = '', maskChar = '', formatChars, variant = 'outlined', value='', onChange = () => 0, ...props }) {$/;"	E
+InputWrapper	src/components/PersonalInformationForm/InputWrapper.js	/^export const InputWrapper = styled.div`$/;"	E
+Label	src/components/Auth/index.js	/^export const Label = styled.h1`$/;"	E
+Label	src/pages/Countdown/Timer.js	/^const Label = styled.div`$/;"	S
+Message	src/components/Splash.js	/^const Message = styled.div`$/;"	S
+MultiSelect	src/components/Form/Select.js	/^export default function MultiSelect({$/;"	E
+Name	src/pages/Dashboard/Payment/Components/PaymentArea.js	/^            Name$/;"	V
+Navigate	src/App.js	/^  Navigate$/;"	V
+NavigationBar	src/components/Dashboard/NavigationBar/index.js	/^export default function NavigationBar() {$/;"	E
+NavigationButton	src/components/Dashboard/NavigationBar/NavigationButton.js	/^export default function NavigationButton({ active, children }) {$/;"	E
+Payment	src/pages/Dashboard/Payment/index.js	/^export default function Payment() {$/;"	E
+PaymentGateway	src/pages/Dashboard/Payment/Components/PaymentArea.js	/^export default function PaymentGateway() {$/;"	E
+PersonalInformationForm	src/components/PersonalInformationForm/index.js	/^export default function PersonalInformationForm() {$/;"	E
+ProtectedRouteGuard	src/App.js	/^function ProtectedRouteGuard({ children }) {$/;"	F
+Route	src/App.js	/^  Route,$/;"	V
+Router	src/App.js	/^  BrowserRouter as Router,$/;"	I
+Routes	src/App.js	/^  Routes,$/;"	V
+Row	src/components/Auth/index.js	/^export const Row = styled.div`$/;"	E
+Salvar	src/components/PersonalInformationForm/index.js	/^              Salvar$/;"	V
+SignIn	src/pages/SignIn/index.js	/^export default function SignIn() {$/;"	E
+Splash	src/components/Splash.js	/^export default function Splash({ loading = false, message = '' }) {$/;"	E
+StyledContainer	src/components/Auth/index.js	/^export const StyledContainer = styled(Container)`$/;"	E
+StyledContainer	src/layouts/Dashboard.js	/^const StyledContainer = styled(Container)`$/;"	S
+StyledLoader	src/components/Splash.js	/^const StyledLoader = styled(Loader)`$/;"	S
+StyledMuiButton	src/components/Form/Button.js	/^const StyledMuiButton = styled(MuiButton)`$/;"	S
+StyledPage	src/components/Splash.js	/^const StyledPage = styled(Page)`$/;"	S
+StyledTextField	src/components/Form/Input.js	/^const StyledTextField = styled(TextField)`$/;"	S
+StyledTypography	src/components/PersonalInformationForm/index.js	/^const StyledTypography = styled(Typography)`$/;"	S
+SubmitContainer	src/components/PersonalInformationForm/index.js	/^const SubmitContainer = styled.div`$/;"	S
+Timer	src/pages/Countdown/Timer.js	/^export default function Timer({ time, onZero = () => 0 }) {$/;"	E
+Title	src/components/Auth/index.js	/^export const Title = styled.h1`$/;"	E
+UserProvider	src/contexts/UserContext.js	/^export function UserProvider({ children }) {$/;"	E
+act	src/hooks/api/useCep.js	/^    act: getCep,$/;"	P
+act	src/hooks/api/useEnrollment.js	/^    act: getEnrollment$/;"	P
+act	src/hooks/api/useSaveEnrollment.js	/^    act: saveEnrollment$/;"	P
+act	src/hooks/api/useSignIn.js	/^    act: signIn$/;"	P
+act	src/hooks/api/useSignUp.js	/^    act: signUp,$/;"	P
+act	src/hooks/useAsync.js	/^    act$/;"	V
+act	src/hooks/useAsync.js	/^  const act = async(...args) => {$/;"	F
+address	src/components/PersonalInformationForm/index.js	/^        address: {$/;"	P
+authApi	src/hooks/api/useSignIn.js	/^import * as authApi from '..\/..\/services\/authApi';$/;"	I
+birthday	src/components/PersonalInformationForm/FormValidations.js	/^  birthday: {$/;"	P
+birthday	src/components/PersonalInformationForm/index.js	/^      birthday: null,$/;"	P
+cep	src/components/PersonalInformationForm/FormValidations.js	/^  cep: {$/;"	P
+cep	src/hooks/api/useCep.js	/^    cep,$/;"	V
+cepApi	src/hooks/api/useCep.js	/^import * as cepApi from '..\/..\/services\/cepApi';$/;"	I
+cepError	src/hooks/api/useCep.js	/^    cepError,$/;"	V
+cepLoading	src/hooks/api/useCep.js	/^    cepLoading,$/;"	V
+children	src/components/Form/Select.js	/^  children,$/;"	V
+city	src/components/PersonalInformationForm/FormValidations.js	/^  city: {$/;"	P
+clearable	src/components/PersonalInformationForm/index.js	/^              clearable$/;"	V
+confirmPassword	src/pages/Enroll/index.js	/^  const [confirmPassword, setConfirmPassword] = useState('');$/;"	V
+cpf	src/components/PersonalInformationForm/FormValidations.js	/^  cpf: {$/;"	P
+custom	src/components/PersonalInformationForm/FormValidations.js	/^    custom: {$/;"	P
+customHandleChange	src/components/PersonalInformationForm/index.js	/^    customHandleChange,$/;"	V
+customHandleChange	src/hooks/useForm.js	/^    customHandleChange,$/;"	V
+customHandleChange	src/hooks/useForm.js	/^  const customHandleChange = (key, sanitizeFn) => (inputValue) => {$/;"	F
+data	src/components/PersonalInformationForm/index.js	/^    data,$/;"	V
+data	src/hooks/api/useCep.js	/^    data: cep,$/;"	P
+data	src/hooks/api/useEnrollment.js	/^    data: enrollment,$/;"	P
+data	src/hooks/api/useEvent.js	/^    data: event,$/;"	P
+data	src/hooks/useAsync.js	/^    data,$/;"	V
+data	src/hooks/useAsync.js	/^  const [data, setData] = useState(null);$/;"	V
+data	src/hooks/useForm.js	/^    data,$/;"	V
+data	src/hooks/useForm.js	/^  const [data, setData] = useState(options?.initialValues || {});$/;"	V
+days	src/pages/Countdown/Timer.js	/^      let { days, hours, minutes, seconds } = timeRemaining;$/;"	V
+days	src/pages/Countdown/Timer.js	/^    days,$/;"	V
+debug	.husky/_/husky.sh	/^  debug () {$/;"	f
+diffToDate	src/pages/Countdown/Timer.js	/^function diffToDate(date) {$/;"	F
+dynamicInputIsLoading	src/components/PersonalInformationForm/index.js	/^  const [dynamicInputIsLoading, setDynamicInputIsLoading] = useState(false);$/;"	V
+email	src/pages/Enroll/index.js	/^  const [email, setEmail] = useState('');$/;"	V
+email	src/pages/SignIn/index.js	/^  const [email, setEmail] = useState('');$/;"	V
+enrollment	src/components/PersonalInformationForm/index.js	/^  const { enrollment } = useEnrollment();$/;"	V
+enrollment	src/hooks/api/useEnrollment.js	/^    enrollment,$/;"	V
+enrollmentApi	src/hooks/api/useEnrollment.js	/^import * as enrollmentApi from '..\/..\/services\/enrollmentApi';$/;"	I
+enrollmentApi	src/hooks/api/useSaveEnrollment.js	/^import * as enrollmentApi from '..\/..\/services\/enrollmentApi';$/;"	I
+enrollmentError	src/hooks/api/useEnrollment.js	/^    enrollmentError,$/;"	V
+enrollmentLoading	src/hooks/api/useEnrollment.js	/^    enrollmentLoading,$/;"	V
+error	src/hooks/api/useCep.js	/^    error: cepError,$/;"	P
+error	src/hooks/api/useEnrollment.js	/^    error: enrollmentError,$/;"	P
+error	src/hooks/api/useEvent.js	/^    error: eventError,$/;"	P
+error	src/hooks/api/useSaveEnrollment.js	/^    error: saveEnrollmentError,$/;"	P
+error	src/hooks/api/useSignIn.js	/^    error: signInError,$/;"	P
+error	src/hooks/api/useSignUp.js	/^    error: signUpError,$/;"	P
+error	src/hooks/useAsync.js	/^    error,$/;"	V
+error	src/hooks/useAsync.js	/^  const [error, setError] = useState(null);$/;"	V
+errors	src/components/PersonalInformationForm/index.js	/^    errors,$/;"	V
+errors	src/hooks/useForm.js	/^    errors,$/;"	V
+errors	src/hooks/useForm.js	/^  const [errors, setErrors] = useState({});$/;"	V
+event	src/contexts/EventInfoContext.js	/^  const { event, eventLoading, eventError } = useEvent();$/;"	V
+event	src/hooks/api/useEvent.js	/^    event,$/;"	V
+eventApi	src/hooks/api/useEvent.js	/^import * as eventApi from '..\/..\/services\/eventApi';$/;"	I
+eventError	src/contexts/EventInfoContext.js	/^  const { event, eventLoading, eventError } = useEvent();$/;"	V
+eventError	src/hooks/api/useEvent.js	/^    eventError,$/;"	V
+eventInfo	src/pages/Countdown/index.js	/^  const { eventInfo, loadingEventInfo } = useContext(EventInfoContext);$/;"	V
+eventInfo	src/pages/Dashboard/index.js	/^  const { eventInfo } = useContext(EventInfoContext);$/;"	V
+eventInfo	src/pages/Enroll/index.js	/^  const { eventInfo } = useContext(EventInfoContext);$/;"	V
+eventInfo	src/pages/SignIn/index.js	/^  const { eventInfo } = useContext(EventInfoContext);$/;"	V
+eventLoading	src/contexts/EventInfoContext.js	/^  const { event, eventLoading, eventError } = useEvent();$/;"	V
+eventLoading	src/hooks/api/useEvent.js	/^    eventLoading,$/;"	V
+exports	.prettierrc.js	/^module.exports = {$/;"	P
+getCep	src/components/PersonalInformationForm/index.js	/^  const { getCep } = useCep();$/;"	V
+getCep	src/hooks/api/useCep.js	/^    getCep,$/;"	V
+getEnrollment	src/hooks/api/useEnrollment.js	/^    getEnrollment$/;"	V
+handleCepChanges	src/components/PersonalInformationForm/index.js	/^  async function handleCepChanges(event) {$/;"	F
+handleChange	src/components/PersonalInformationForm/index.js	/^    handleChange,$/;"	V
+handleChange	src/hooks/useForm.js	/^    handleChange,$/;"	V
+handleChange	src/hooks/useForm.js	/^  const handleChange = (key, sanitizeFn) => (e) => {$/;"	F
+handleSubmit	src/components/PersonalInformationForm/index.js	/^    handleSubmit,$/;"	V
+handleSubmit	src/hooks/useForm.js	/^    handleSubmit,$/;"	V
+handleSubmit	src/hooks/useForm.js	/^  const handleSubmit = async(event) => {$/;"	F
+headers	src/services/enrollmentApi.js	/^    headers: {$/;"	P
+hours	src/pages/Countdown/Timer.js	/^      let { days, hours, minutes, seconds } = timeRemaining;$/;"	V
+hours	src/pages/Countdown/Timer.js	/^    hours,$/;"	V
+id	src/components/Form/Select.js	/^  id,$/;"	V
+initialValues	src/components/PersonalInformationForm/index.js	/^    initialValues: {$/;"	P
+isActive	src/components/Dashboard/NavigationBar/index.js	/^  function isActive(buttonPath) {$/;"	F
+isValid	src/components/PersonalInformationForm/FormValidations.js	/^      isValid: (value) => !value || !isNaN(new Date(value?.split('-').join('-'))),$/;"	M
+isValid	src/components/PersonalInformationForm/FormValidations.js	/^      isValid: (value) => Number(value),$/;"	M
+isValid	src/components/PersonalInformationForm/FormValidations.js	/^      isValid: (value) => isValidString(value),$/;"	M
+isValid	src/components/PersonalInformationForm/FormValidations.js	/^      isValid: (value) => parseInt(value?.length, 10) === 9,$/;"	M
+isValid	src/components/PersonalInformationForm/FormValidations.js	/^      isValid: (value) => parseInt(value?.length, 10) >= 13,$/;"	M
+isValid	src/components/PersonalInformationForm/FormValidations.js	/^      isValid: (value) => parseInt(value?.replaceAll('.', '')?.replace('-', '')?.length, 10) === 11,$/;"	M
+isValidCep	src/components/PersonalInformationForm/index.js	/^  function isValidCep(cep) {$/;"	F
+isValidString	src/components/PersonalInformationForm/FormValidations.js	/^function isValidString(value) {$/;"	F
+label	src/components/Form/Select.js	/^  label,$/;"	V
+loading	src/hooks/api/useCep.js	/^    loading: cepLoading,$/;"	P
+loading	src/hooks/api/useEnrollment.js	/^    loading: enrollmentLoading,$/;"	P
+loading	src/hooks/api/useEvent.js	/^    loading: eventLoading,$/;"	P
+loading	src/hooks/api/useSaveEnrollment.js	/^    loading: saveEnrollmentLoading,$/;"	P
+loading	src/hooks/api/useSignIn.js	/^    loading: signInLoading,$/;"	P
+loading	src/hooks/api/useSignUp.js	/^    loading: signUpLoading,$/;"	P
+loading	src/hooks/useAsync.js	/^    loading,$/;"	V
+loading	src/hooks/useAsync.js	/^  const [loading, setLoading] = useState(immediate);$/;"	V
+loadingEventInfo	src/pages/Countdown/index.js	/^  const { eventInfo, loadingEventInfo } = useContext(EventInfoContext);$/;"	V
+loadingSignIn	src/pages/SignIn/index.js	/^  const { loadingSignIn, signIn } = useSignIn();$/;"	V
+loadingSignUp	src/pages/Enroll/index.js	/^  const { loadingSignUp, signUp } = useSignUp();$/;"	V
+minutes	src/pages/Countdown/Timer.js	/^      let { days, hours, minutes, seconds } = timeRemaining;$/;"	V
+minutes	src/pages/Countdown/Timer.js	/^    minutes,$/;"	V
+name	src/components/Form/Select.js	/^  name,$/;"	V
+name	src/components/PersonalInformationForm/FormValidations.js	/^  name: {$/;"	P
+name	src/components/PersonalInformationForm/index.js	/^    const { name, value } = event.target;$/;"	V
+neighborhood	src/components/PersonalInformationForm/FormValidations.js	/^  neighborhood: {$/;"	P
+newData	src/components/PersonalInformationForm/index.js	/^      const newData = {$/;"	O
+newDataValues	src/components/PersonalInformationForm/index.js	/^      const newDataValues = {$/;"	O
+newErrors	src/hooks/useForm.js	/^      const newErrors = {};$/;"	O
+number	src/components/PersonalInformationForm/FormValidations.js	/^  number: {$/;"	P
+onChange	src/components/Form/Select.js	/^  onChange,$/;"	V
+onZero	src/pages/Countdown/index.js	/^  function onZero() {$/;"	F
+password	src/pages/Enroll/index.js	/^  const [password, setPassword] = useState('');$/;"	V
+password	src/pages/SignIn/index.js	/^  const [password, setPassword] = useState('');$/;"	V
+phone	src/components/PersonalInformationForm/FormValidations.js	/^  phone: {$/;"	P
+printWidth	.prettierrc.js	/^  printWidth: 120,$/;"	P
+saveEnrollment	src/components/PersonalInformationForm/index.js	/^  const { saveEnrollmentLoading, saveEnrollment } = useSaveEnrollment();$/;"	V
+saveEnrollment	src/hooks/api/useSaveEnrollment.js	/^    saveEnrollment$/;"	V
+saveEnrollmentError	src/hooks/api/useSaveEnrollment.js	/^    saveEnrollmentError,$/;"	V
+saveEnrollmentLoading	src/components/PersonalInformationForm/index.js	/^  const { saveEnrollmentLoading, saveEnrollment } = useSaveEnrollment();$/;"	V
+saveEnrollmentLoading	src/hooks/api/useSaveEnrollment.js	/^    saveEnrollmentLoading,$/;"	V
+seconds	src/pages/Countdown/Timer.js	/^      let { days, hours, minutes, seconds } = timeRemaining;$/;"	V
+seconds	src/pages/Countdown/Timer.js	/^    seconds$/;"	V
+semi	.prettierrc.js	/^  semi: true,$/;"	P
+setConfirmPassword	src/pages/Enroll/index.js	/^  const [confirmPassword, setConfirmPassword] = useState('');$/;"	V
+setData	src/components/PersonalInformationForm/index.js	/^    setData,$/;"	V
+setData	src/hooks/useAsync.js	/^  const [data, setData] = useState(null);$/;"	V
+setData	src/hooks/useForm.js	/^    setData,$/;"	V
+setData	src/hooks/useForm.js	/^  const [data, setData] = useState(options?.initialValues || {});$/;"	V
+setDynamicInputIsLoading	src/components/PersonalInformationForm/index.js	/^  const [dynamicInputIsLoading, setDynamicInputIsLoading] = useState(false);$/;"	V
+setEmail	src/pages/Enroll/index.js	/^  const [email, setEmail] = useState('');$/;"	V
+setEmail	src/pages/SignIn/index.js	/^  const [email, setEmail] = useState('');$/;"	V
+setError	src/hooks/useAsync.js	/^  const [error, setError] = useState(null);$/;"	V
+setErrors	src/hooks/useForm.js	/^  const [errors, setErrors] = useState({});$/;"	V
+setLoading	src/hooks/useAsync.js	/^  const [loading, setLoading] = useState(immediate);$/;"	V
+setPassword	src/pages/Enroll/index.js	/^  const [password, setPassword] = useState('');$/;"	V
+setPassword	src/pages/SignIn/index.js	/^  const [password, setPassword] = useState('');$/;"	V
+setStoredValue	src/hooks/useLocalStorage.js	/^  const [storedValue, setStoredValue] = useState(() => {$/;"	V
+setTimeRemaining	src/pages/Countdown/Timer.js	/^  const [timeRemaining, setTimeRemaining] = useState(diffToDate(time));$/;"	V
+setUserData	src/contexts/UserContext.js	/^  const [userData, setUserData] = useLocalStorage('userData', {});$/;"	V
+setUserData	src/pages/SignIn/index.js	/^  const { setUserData } = useContext(UserContext);$/;"	V
+setValue	src/hooks/useLocalStorage.js	/^  const setValue = (value) => {$/;"	F
+signIn	src/hooks/api/useSignIn.js	/^    signIn$/;"	V
+signIn	src/pages/SignIn/index.js	/^  const { loadingSignIn, signIn } = useSignIn();$/;"	V
+signInError	src/hooks/api/useSignIn.js	/^    signInError,$/;"	V
+signInLoading	src/hooks/api/useSignIn.js	/^    signInLoading,$/;"	V
+signUp	src/hooks/api/useSignUp.js	/^    signUp,$/;"	V
+signUp	src/pages/Enroll/index.js	/^  const { loadingSignUp, signUp } = useSignUp();$/;"	V
+signUpError	src/hooks/api/useSignUp.js	/^    signUpError,$/;"	V
+signUpLoading	src/hooks/api/useSignUp.js	/^    signUpLoading,$/;"	V
+singleQuote	.prettierrc.js	/^  singleQuote: true,$/;"	P
+state	src/components/PersonalInformationForm/FormValidations.js	/^  state: {$/;"	P
+storedValue	src/hooks/useLocalStorage.js	/^  const [storedValue, setStoredValue] = useState(() => {$/;"	V
+street	src/components/PersonalInformationForm/FormValidations.js	/^  street: {$/;"	P
+submit	src/pages/Enroll/index.js	/^  async function submit(event) {$/;"	F
+submit	src/pages/SignIn/index.js	/^  async function submit(event) {$/;"	F
+tabWidth	.prettierrc.js	/^  tabWidth: 2,$/;"	P
+timeRemaining	src/pages/Countdown/Timer.js	/^  const [timeRemaining, setTimeRemaining] = useState(diffToDate(time));$/;"	V
+ufList	src/components/PersonalInformationForm/ufList.js	/^export const ufList = [$/;"	E
+useAsync	src/hooks/useAsync.js	/^export default function useAsync(handler, immediate = true) {$/;"	E
+useCep	src/hooks/api/useCep.js	/^export default function useCep() {$/;"	E
+useEnrollment	src/hooks/api/useEnrollment.js	/^export default function useEnrollment() {$/;"	E
+useEvent	src/hooks/api/useEvent.js	/^export default function useEvent() {$/;"	E
+useForm	src/hooks/useForm.js	/^export const useForm = (options) => {$/;"	E
+useIsDateAfter	src/hooks/useIsDateAfter.js	/^export default function useIsDateAfter(date) {$/;"	E
+useLocalStorage	src/hooks/useLocalStorage.js	/^export default function useLocalStorage(key, initialValue) {$/;"	E
+useSaveEnrollment	src/hooks/api/useSaveEnrollment.js	/^export default function useSaveEnrollment() {$/;"	E
+useSignUp	src/hooks/api/useSignIn.js	/^export default function useSignUp() {$/;"	E
+useSignUp	src/hooks/api/useSignUp.js	/^export default function useSignUp() {$/;"	E
+useToken	src/hooks/useToken.js	/^export default function useToken() {$/;"	E
+userApi	src/hooks/api/useSignUp.js	/^import * as userApi from '..\/..\/services\/userApi';$/;"	I
+userData	src/contexts/UserContext.js	/^  const [userData, setUserData] = useLocalStorage('userData', {});$/;"	V
+userData	src/hooks/useToken.js	/^  const { userData: user } = useContext(UserContext);$/;"	V
+validations	src/components/PersonalInformationForm/FormValidations.js	/^const validations = {$/;"	O
+validations	src/components/PersonalInformationForm/index.js	/^    validations: FormValidations,$/;"	P
+value	src/components/Form/Select.js	/^  value,$/;"	V
+value	src/components/PersonalInformationForm/index.js	/^    const { name, value } = event.target;$/;"	V
