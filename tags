@@ -9,8 +9,9 @@ App	src/App.js	/^export default function App() {$/;"	E
 AuthLayout	src/layouts/Auth.js	/^export default function AuthLayout({ background, children }) {$/;"	E
 Button	src/components/Dashboard/NavigationBar/NavigationButton.js	/^const Button = styled.button`$/;"	S
 Button	src/components/Form/Button.js	/^export default function Button({ variant='contained', children, ...props }) {$/;"	E
+CardContainer	src/components/Dashboard/Payment/CreditCard.js	/^const CardContainer = styled.div`$/;"	S
 Certificate	src/pages/Dashboard/Certificate/index.js	/^export default function Certificate() {$/;"	E
-ConfirmButton	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const ConfirmButton = styled.button``;$/;"	S
+ConfirmButton	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const ConfirmButton = styled.button`$/;"	S
 Container	src/components/Dashboard/NavigationBar/index.js	/^const Container = styled.div`$/;"	S
 Container	src/layouts/Dashboard.js	/^import { StyledContainer as Container } from '..\/components\/Auth';$/;"	I
 Container	src/pages/Dashboard/index.js	/^const Container = styled.div`$/;"	S
@@ -29,12 +30,12 @@ FaCertificate	src/components/Dashboard/NavigationBar/index.js	/^  FaCertificate,
 FaFileContract	src/components/Dashboard/NavigationBar/index.js	/^  FaFileContract,$/;"	V
 FaMoneyBill	src/components/Dashboard/NavigationBar/index.js	/^  FaMoneyBill,$/;"	V
 FillSubscription	src/pages/Dashboard/FillSubscription/index.js	/^export default function FillSubscription() {$/;"	E
+Form	src/components/Dashboard/Payment/CreditCard.js	/^const Form = styled.form`$/;"	S
 FormControlWrapper	src/components/Form/Select.js	/^const FormControlWrapper = styled.section`$/;"	S
 FormWrapper	src/components/PersonalInformationForm/FormWrapper.js	/^export const FormWrapper = styled.form`$/;"	E
 Grid	src/components/Splash.js	/^const Grid = styled.div`$/;"	S
 Grid	src/pages/Countdown/Timer.js	/^const Grid = styled.div`$/;"	S
 Hotel	src/pages/Dashboard/Hotel/index.js	/^export default function Hotel() {$/;"	E
-InformationContainer	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const InformationContainer = styled.div``;$/;"	S
 Input	src/components/Form/Input.js	/^export default function Input({ mask = '', maskChar = '', formatChars, variant = 'outlined', value='', onChange = () => 0, ...props }) {$/;"	E
 InputWrapper	src/components/PersonalInformationForm/InputWrapper.js	/^export const InputWrapper = styled.div`$/;"	E
 Label	src/components/Auth/index.js	/^export const Label = styled.h1`$/;"	E
@@ -45,10 +46,10 @@ Navigate	src/App.js	/^  Navigate$/;"	V
 NavigationBar	src/components/Dashboard/NavigationBar/index.js	/^export default function NavigationBar() {$/;"	E
 NavigationButton	src/components/Dashboard/NavigationBar/NavigationButton.js	/^export default function NavigationButton({ active, children }) {$/;"	E
 Payment	src/pages/Dashboard/Payment/index.js	/^export default function Payment() {$/;"	E
-PaymentContainer	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const PaymentContainer = styled.div``;$/;"	S
+PaymentContainer	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const PaymentContainer = styled.div`$/;"	S
 PaymentForm	src/components/Dashboard/Payment/CreditCard.js	/^const PaymentForm = (props) => {$/;"	F
 PaymentGateway	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^export default function PaymentGateway() {$/;"	E
-PaymentLabel	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const PaymentLabel = styled.h1``;$/;"	S
+PaymentLabel	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const PaymentLabel = styled.h1`$/;"	S
 PersonalInformationForm	src/components/PersonalInformationForm/index.js	/^export default function PersonalInformationForm() {$/;"	E
 ProtectedRouteGuard	src/App.js	/^function ProtectedRouteGuard({ children }) {$/;"	F
 Route	src/App.js	/^  Route,$/;"	V
@@ -56,6 +57,7 @@ Router	src/App.js	/^  BrowserRouter as Router,$/;"	I
 Routes	src/App.js	/^  Routes,$/;"	V
 Row	src/components/Auth/index.js	/^export const Row = styled.div`$/;"	E
 Salvar	src/components/PersonalInformationForm/index.js	/^              Salvar$/;"	V
+SensitiveInfoContainer	src/components/Dashboard/Payment/CreditCard.js	/^const SensitiveInfoContainer = styled.div`$/;"	S
 SignIn	src/pages/SignIn/index.js	/^export default function SignIn() {$/;"	E
 Splash	src/components/Splash.js	/^export default function Splash({ loading = false, message = '' }) {$/;"	E
 StyledContainer	src/components/Auth/index.js	/^export const StyledContainer = styled(Container)`$/;"	E
@@ -138,9 +140,8 @@ eventInfo	src/pages/SignIn/index.js	/^  const { eventInfo } = useContext(EventIn
 eventLoading	src/contexts/EventInfoContext.js	/^  const { event, eventLoading, eventError } = useEvent();$/;"	V
 eventLoading	src/hooks/api/useEvent.js	/^    eventLoading,$/;"	V
 exports	.prettierrc.js	/^module.exports = {$/;"	P
-formData	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^      formData: null$/;"	P
-formData	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^    const formData = [...e.target.elements]$/;"	A
-formData	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^    formData: null$/;"	P
+formData	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^      formData: null,$/;"	P
+formData	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^    formData: null,$/;"	P
 getCep	src/components/PersonalInformationForm/index.js	/^  const { getCep } = useCep();$/;"	V
 getCep	src/hooks/api/useCep.js	/^    getCep,$/;"	V
 getEnrollment	src/hooks/api/useEnrollment.js	/^    getEnrollment$/;"	V
@@ -200,6 +201,7 @@ password	src/pages/Enroll/index.js	/^  const [password, setPassword] = useState(
 password	src/pages/SignIn/index.js	/^  const [password, setPassword] = useState('');$/;"	V
 phone	src/components/PersonalInformationForm/FormValidations.js	/^  phone: {$/;"	P
 printWidth	.prettierrc.js	/^  printWidth: 120,$/;"	P
+required	src/components/Dashboard/Payment/CreditCard.js	/^            required$/;"	V
 required	src/components/Dashboard/Payment/CreditCard.js	/^          required$/;"	V
 saveEnrollment	src/components/PersonalInformationForm/index.js	/^  const { saveEnrollmentLoading, saveEnrollment } = useSaveEnrollment();$/;"	V
 saveEnrollment	src/hooks/api/useSaveEnrollment.js	/^    saveEnrollment$/;"	V

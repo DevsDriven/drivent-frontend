@@ -9,7 +9,7 @@ export default function PaymentGateway() {
     cvc: '',
     name: '',
     focus: '',
-    formData: null
+    formData: null,
   });
 
   const handleInputChange = (evt) => {
@@ -24,19 +24,13 @@ export default function PaymentGateway() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formData = [...e.target.elements]
-      .filter(d => d.name)
-      .reduce((acc, d) => {
-        acc[d.name] = d.value;
-        return acc;
-      }, {});
     setState({
       number: '',
       expiry: '',
       cvc: '',
       name: '',
       focus: '',
-      formData: null
+      formData: null,
     });
     console.log(state);
   };
@@ -44,18 +38,34 @@ export default function PaymentGateway() {
   return (
     <PaymentContainer>
       <PaymentLabel>Pagamento</PaymentLabel>
-      <InformationContainer>
-        <PaymentForm state={state} handleInputChange={handleInputChange} handleInputFocus={handleInputFocus} handleSubmit={handleSubmit} />
-      </InformationContainer>
-      <ConfirmButton>Finalizar Pagamento</ConfirmButton>
+      <PaymentForm
+        state={state}
+        handleInputChange={handleInputChange}
+        handleInputFocus={handleInputFocus}
+        handleSubmit={handleSubmit}
+      />
+      <ConfirmButton onClick={handleSubmit}>Finalizar Pagamento</ConfirmButton>
     </PaymentContainer>
   );
 }
 
-const PaymentContainer = styled.div``;
+const PaymentContainer = styled.div`
+  width: 100%;
+`;
 
-const PaymentLabel = styled.h1``;
+const PaymentLabel = styled.h1`
+  font-size: 20px;
+  color: #8e8e8e;
+`;
 
-const InformationContainer = styled.div``;
-
-const ConfirmButton = styled.button``;
+const ConfirmButton = styled.button`
+  width: 182px;
+  height: 37px;
+  margin-top: 40px;
+  background-color: #e0e0e0;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  border: 0;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+`;
