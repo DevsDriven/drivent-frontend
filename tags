@@ -138,6 +138,9 @@ eventInfo	src/pages/SignIn/index.js	/^  const { eventInfo } = useContext(EventIn
 eventLoading	src/contexts/EventInfoContext.js	/^  const { event, eventLoading, eventError } = useEvent();$/;"	V
 eventLoading	src/hooks/api/useEvent.js	/^    eventLoading,$/;"	V
 exports	.prettierrc.js	/^module.exports = {$/;"	P
+formData	src/components/Dashboard/Payment/CreditCard.js	/^      formData: null$/;"	P
+formData	src/components/Dashboard/Payment/CreditCard.js	/^    const formData = [...e.target.elements]$/;"	A
+formData	src/components/Dashboard/Payment/CreditCard.js	/^    formData: null$/;"	P
 getCep	src/components/PersonalInformationForm/index.js	/^  const { getCep } = useCep();$/;"	V
 getCep	src/hooks/api/useCep.js	/^    getCep,$/;"	V
 getEnrollment	src/hooks/api/useEnrollment.js	/^    getEnrollment$/;"	V
@@ -147,6 +150,7 @@ handleChange	src/hooks/useForm.js	/^    handleChange,$/;"	V
 handleChange	src/hooks/useForm.js	/^  const handleChange = (key, sanitizeFn) => (e) => {$/;"	F
 handleInputChange	src/components/Dashboard/Payment/CreditCard.js	/^  const handleInputChange = (evt) => {$/;"	F
 handleInputFocus	src/components/Dashboard/Payment/CreditCard.js	/^  const handleInputFocus = (evt) => {$/;"	F
+handleSubmit	src/components/Dashboard/Payment/CreditCard.js	/^  const handleSubmit = (e) => {$/;"	F
 handleSubmit	src/components/PersonalInformationForm/index.js	/^    handleSubmit,$/;"	V
 handleSubmit	src/hooks/useForm.js	/^    handleSubmit,$/;"	V
 handleSubmit	src/hooks/useForm.js	/^  const handleSubmit = async(event) => {$/;"	F
@@ -193,6 +197,7 @@ password	src/pages/Enroll/index.js	/^  const [password, setPassword] = useState(
 password	src/pages/SignIn/index.js	/^  const [password, setPassword] = useState('');$/;"	V
 phone	src/components/PersonalInformationForm/FormValidations.js	/^  phone: {$/;"	P
 printWidth	.prettierrc.js	/^  printWidth: 120,$/;"	P
+required	src/components/Dashboard/Payment/CreditCard.js	/^          required$/;"	V
 saveEnrollment	src/components/PersonalInformationForm/index.js	/^  const { saveEnrollmentLoading, saveEnrollment } = useSaveEnrollment();$/;"	V
 saveEnrollment	src/hooks/api/useSaveEnrollment.js	/^    saveEnrollment$/;"	V
 saveEnrollmentError	src/hooks/api/useSaveEnrollment.js	/^    saveEnrollmentError,$/;"	V
