@@ -46,7 +46,7 @@ NavigationBar	src/components/Dashboard/NavigationBar/index.js	/^export default f
 NavigationButton	src/components/Dashboard/NavigationBar/NavigationButton.js	/^export default function NavigationButton({ active, children }) {$/;"	E
 Payment	src/pages/Dashboard/Payment/index.js	/^export default function Payment() {$/;"	E
 PaymentContainer	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const PaymentContainer = styled.div``;$/;"	S
-PaymentForm	src/components/Dashboard/Payment/CreditCard.js	/^const PaymentForm = () => {$/;"	F
+PaymentForm	src/components/Dashboard/Payment/CreditCard.js	/^const PaymentForm = (props) => {$/;"	F
 PaymentGateway	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^export default function PaymentGateway() {$/;"	E
 PaymentLabel	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const PaymentLabel = styled.h1``;$/;"	S
 PersonalInformationForm	src/components/PersonalInformationForm/index.js	/^export default function PersonalInformationForm() {$/;"	E
@@ -138,9 +138,9 @@ eventInfo	src/pages/SignIn/index.js	/^  const { eventInfo } = useContext(EventIn
 eventLoading	src/contexts/EventInfoContext.js	/^  const { event, eventLoading, eventError } = useEvent();$/;"	V
 eventLoading	src/hooks/api/useEvent.js	/^    eventLoading,$/;"	V
 exports	.prettierrc.js	/^module.exports = {$/;"	P
-formData	src/components/Dashboard/Payment/CreditCard.js	/^      formData: null$/;"	P
-formData	src/components/Dashboard/Payment/CreditCard.js	/^    const formData = [...e.target.elements]$/;"	A
-formData	src/components/Dashboard/Payment/CreditCard.js	/^    formData: null$/;"	P
+formData	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^      formData: null$/;"	P
+formData	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^    const formData = [...e.target.elements]$/;"	A
+formData	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^    formData: null$/;"	P
 getCep	src/components/PersonalInformationForm/index.js	/^  const { getCep } = useCep();$/;"	V
 getCep	src/hooks/api/useCep.js	/^    getCep,$/;"	V
 getEnrollment	src/hooks/api/useEnrollment.js	/^    getEnrollment$/;"	V
@@ -148,12 +148,15 @@ handleCepChanges	src/components/PersonalInformationForm/index.js	/^  async funct
 handleChange	src/components/PersonalInformationForm/index.js	/^    handleChange,$/;"	V
 handleChange	src/hooks/useForm.js	/^    handleChange,$/;"	V
 handleChange	src/hooks/useForm.js	/^  const handleChange = (key, sanitizeFn) => (e) => {$/;"	F
-handleInputChange	src/components/Dashboard/Payment/CreditCard.js	/^  const handleInputChange = (evt) => {$/;"	F
-handleInputFocus	src/components/Dashboard/Payment/CreditCard.js	/^  const handleInputFocus = (evt) => {$/;"	F
-handleSubmit	src/components/Dashboard/Payment/CreditCard.js	/^  const handleSubmit = (e) => {$/;"	F
+handleInputChange	src/components/Dashboard/Payment/CreditCard.js	/^  const { state, handleInputChange, handleInputFocus, handleSubmit } = props;$/;"	V
+handleInputChange	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const handleInputChange = (evt) => {$/;"	F
+handleInputFocus	src/components/Dashboard/Payment/CreditCard.js	/^  const { state, handleInputChange, handleInputFocus, handleSubmit } = props;$/;"	V
+handleInputFocus	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const handleInputFocus = (evt) => {$/;"	F
+handleSubmit	src/components/Dashboard/Payment/CreditCard.js	/^  const { state, handleInputChange, handleInputFocus, handleSubmit } = props;$/;"	V
 handleSubmit	src/components/PersonalInformationForm/index.js	/^    handleSubmit,$/;"	V
 handleSubmit	src/hooks/useForm.js	/^    handleSubmit,$/;"	V
 handleSubmit	src/hooks/useForm.js	/^  const handleSubmit = async(event) => {$/;"	F
+handleSubmit	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const handleSubmit = (e) => {$/;"	F
 headers	src/services/enrollmentApi.js	/^    headers: {$/;"	P
 hours	src/pages/Countdown/Timer.js	/^      let { days, hours, minutes, seconds } = timeRemaining;$/;"	V
 hours	src/pages/Countdown/Timer.js	/^    hours,$/;"	V
@@ -182,10 +185,10 @@ loadingSignIn	src/pages/SignIn/index.js	/^  const { loadingSignIn, signIn } = us
 loadingSignUp	src/pages/Enroll/index.js	/^  const { loadingSignUp, signUp } = useSignUp();$/;"	V
 minutes	src/pages/Countdown/Timer.js	/^      let { days, hours, minutes, seconds } = timeRemaining;$/;"	V
 minutes	src/pages/Countdown/Timer.js	/^    minutes,$/;"	V
-name	src/components/Dashboard/Payment/CreditCard.js	/^    const { name, value } = evt.target;$/;"	V
 name	src/components/Form/Select.js	/^  name,$/;"	V
 name	src/components/PersonalInformationForm/FormValidations.js	/^  name: {$/;"	P
 name	src/components/PersonalInformationForm/index.js	/^    const { name, value } = event.target;$/;"	V
+name	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^    const { name, value } = evt.target;$/;"	V
 neighborhood	src/components/PersonalInformationForm/FormValidations.js	/^  neighborhood: {$/;"	P
 newData	src/components/PersonalInformationForm/index.js	/^      const newData = {$/;"	O
 newDataValues	src/components/PersonalInformationForm/index.js	/^      const newDataValues = {$/;"	O
@@ -219,7 +222,7 @@ setErrors	src/hooks/useForm.js	/^  const [errors, setErrors] = useState({});$/;"
 setLoading	src/hooks/useAsync.js	/^  const [loading, setLoading] = useState(immediate);$/;"	V
 setPassword	src/pages/Enroll/index.js	/^  const [password, setPassword] = useState('');$/;"	V
 setPassword	src/pages/SignIn/index.js	/^  const [password, setPassword] = useState('');$/;"	V
-setState	src/components/Dashboard/Payment/CreditCard.js	/^  const [state, setState] = useState({$/;"	V
+setState	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const [state, setState] = useState({$/;"	V
 setStoredValue	src/hooks/useLocalStorage.js	/^  const [storedValue, setStoredValue] = useState(() => {$/;"	V
 setTimeRemaining	src/pages/Countdown/Timer.js	/^  const [timeRemaining, setTimeRemaining] = useState(diffToDate(time));$/;"	V
 setUserData	src/contexts/UserContext.js	/^  const [userData, setUserData] = useLocalStorage('userData', {});$/;"	V
@@ -234,8 +237,9 @@ signUp	src/pages/Enroll/index.js	/^  const { loadingSignUp, signUp } = useSignUp
 signUpError	src/hooks/api/useSignUp.js	/^    signUpError,$/;"	V
 signUpLoading	src/hooks/api/useSignUp.js	/^    signUpLoading,$/;"	V
 singleQuote	.prettierrc.js	/^  singleQuote: true,$/;"	P
-state	src/components/Dashboard/Payment/CreditCard.js	/^  const [state, setState] = useState({$/;"	V
+state	src/components/Dashboard/Payment/CreditCard.js	/^  const { state, handleInputChange, handleInputFocus, handleSubmit } = props;$/;"	V
 state	src/components/PersonalInformationForm/FormValidations.js	/^  state: {$/;"	P
+state	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const [state, setState] = useState({$/;"	V
 storedValue	src/hooks/useLocalStorage.js	/^  const [storedValue, setStoredValue] = useState(() => {$/;"	V
 street	src/components/PersonalInformationForm/FormValidations.js	/^  street: {$/;"	P
 submit	src/pages/Enroll/index.js	/^  async function submit(event) {$/;"	F
@@ -259,6 +263,6 @@ userData	src/contexts/UserContext.js	/^  const [userData, setUserData] = useLoca
 userData	src/hooks/useToken.js	/^  const { userData: user } = useContext(UserContext);$/;"	V
 validations	src/components/PersonalInformationForm/FormValidations.js	/^const validations = {$/;"	O
 validations	src/components/PersonalInformationForm/index.js	/^    validations: FormValidations,$/;"	P
-value	src/components/Dashboard/Payment/CreditCard.js	/^    const { name, value } = evt.target;$/;"	V
 value	src/components/Form/Select.js	/^  value,$/;"	V
 value	src/components/PersonalInformationForm/index.js	/^    const { name, value } = event.target;$/;"	V
+value	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^    const { name, value } = evt.target;$/;"	V

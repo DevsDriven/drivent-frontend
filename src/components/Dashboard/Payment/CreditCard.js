@@ -1,46 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Cards from 'react-credit-cards-2';
 import 'react-credit-cards-2/es/styles-compiled.css';
 
-const PaymentForm = () => {
-  const [state, setState] = useState({
-    number: '',
-    expiry: '',
-    cvc: '',
-    name: '',
-    focus: '',
-    formData: null
-  });
-
-  const handleInputChange = (evt) => {
-    const { name, value } = evt.target;
-
-    setState((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleInputFocus = (evt) => {
-    setState((prev) => ({ ...prev, focus: evt.target.name }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const formData = [...e.target.elements]
-      .filter(d => d.name)
-      .reduce((acc, d) => {
-        acc[d.name] = d.value;
-        return acc;
-      }, {});
-    setState({
-      number: '',
-      expiry: '',
-      cvc: '',
-      name: '',
-      focus: '',
-      formData: null
-    });
-    console.log(state);
-  };
-
+const PaymentForm = (props) => {
+  const { state, handleInputChange, handleInputFocus, handleSubmit } = props;
+  
   return (
     <div id="PaymentForm">
       <Cards number={state.number} expiry={state.expiry} cvc={state.cvc} name={state.name} focused={state.focus} />
