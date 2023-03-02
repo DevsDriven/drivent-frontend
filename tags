@@ -9,8 +9,13 @@ App	src/App.js	/^export default function App() {$/;"	E
 AuthLayout	src/layouts/Auth.js	/^export default function AuthLayout({ background, children }) {$/;"	E
 Button	src/components/Dashboard/NavigationBar/NavigationButton.js	/^const Button = styled.button`$/;"	S
 Button	src/components/Form/Button.js	/^export default function Button({ variant='contained', children, ...props }) {$/;"	E
-CVC	src/pages/Dashboard/Payment/Components/PaymentArea.js	/^              CVC$/;"	V
+CVC	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const CVC = styled.input``;$/;"	S
+CardInfoContainer	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const CardInfoContainer = styled.div``;$/;"	S
+CardNumber	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const CardNumber = styled.input``;$/;"	S
+CardNumberLabel	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const CardNumberLabel = styled.h2``;$/;"	S
+CardOwner	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const CardOwner = styled.input``;$/;"	S
 Certificate	src/pages/Dashboard/Certificate/index.js	/^export default function Certificate() {$/;"	E
+ConfirmButton	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const ConfirmButton = styled.button``;$/;"	S
 Container	src/components/Dashboard/NavigationBar/index.js	/^const Container = styled.div`$/;"	S
 Container	src/layouts/Dashboard.js	/^import { StyledContainer as Container } from '..\/components\/Auth';$/;"	I
 Container	src/pages/Dashboard/index.js	/^const Container = styled.div`$/;"	S
@@ -29,23 +34,26 @@ FaCertificate	src/components/Dashboard/NavigationBar/index.js	/^  FaCertificate,
 FaFileContract	src/components/Dashboard/NavigationBar/index.js	/^  FaFileContract,$/;"	V
 FaMoneyBill	src/components/Dashboard/NavigationBar/index.js	/^  FaMoneyBill,$/;"	V
 FillSubscription	src/pages/Dashboard/FillSubscription/index.js	/^export default function FillSubscription() {$/;"	E
+FormContainer	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const FormContainer = styled.div``;$/;"	S
 FormControlWrapper	src/components/Form/Select.js	/^const FormControlWrapper = styled.section`$/;"	S
 FormWrapper	src/components/PersonalInformationForm/FormWrapper.js	/^export const FormWrapper = styled.form`$/;"	E
 Grid	src/components/Splash.js	/^const Grid = styled.div`$/;"	S
 Grid	src/pages/Countdown/Timer.js	/^const Grid = styled.div`$/;"	S
 Hotel	src/pages/Dashboard/Hotel/index.js	/^export default function Hotel() {$/;"	E
+InformationContainer	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const InformationContainer = styled.div``;$/;"	S
 Input	src/components/Form/Input.js	/^export default function Input({ mask = '', maskChar = '', formatChars, variant = 'outlined', value='', onChange = () => 0, ...props }) {$/;"	E
 InputWrapper	src/components/PersonalInformationForm/InputWrapper.js	/^export const InputWrapper = styled.div`$/;"	E
 Label	src/components/Auth/index.js	/^export const Label = styled.h1`$/;"	E
 Label	src/pages/Countdown/Timer.js	/^const Label = styled.div`$/;"	S
 Message	src/components/Splash.js	/^const Message = styled.div`$/;"	S
 MultiSelect	src/components/Form/Select.js	/^export default function MultiSelect({$/;"	E
-Name	src/pages/Dashboard/Payment/Components/PaymentArea.js	/^            Name$/;"	V
 Navigate	src/App.js	/^  Navigate$/;"	V
 NavigationBar	src/components/Dashboard/NavigationBar/index.js	/^export default function NavigationBar() {$/;"	E
 NavigationButton	src/components/Dashboard/NavigationBar/NavigationButton.js	/^export default function NavigationButton({ active, children }) {$/;"	E
 Payment	src/pages/Dashboard/Payment/index.js	/^export default function Payment() {$/;"	E
-PaymentGateway	src/pages/Dashboard/Payment/Components/PaymentArea.js	/^export default function PaymentGateway() {$/;"	E
+PaymentContainer	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const PaymentContainer = styled.div``;$/;"	S
+PaymentGateway	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^export default function PaymentGateway() {$/;"	E
+PaymentLabel	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const PaymentLabel = styled.h1``;$/;"	S
 PersonalInformationForm	src/components/PersonalInformationForm/index.js	/^export default function PersonalInformationForm() {$/;"	E
 ProtectedRouteGuard	src/App.js	/^function ProtectedRouteGuard({ children }) {$/;"	F
 Route	src/App.js	/^  Route,$/;"	V
@@ -53,6 +61,7 @@ Router	src/App.js	/^  BrowserRouter as Router,$/;"	I
 Routes	src/App.js	/^  Routes,$/;"	V
 Row	src/components/Auth/index.js	/^export const Row = styled.div`$/;"	E
 Salvar	src/components/PersonalInformationForm/index.js	/^              Salvar$/;"	V
+SensitiveCardInfoContainer	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const SensitiveCardInfoContainer = styled.div``;$/;"	S
 SignIn	src/pages/SignIn/index.js	/^export default function SignIn() {$/;"	E
 Splash	src/components/Splash.js	/^export default function Splash({ loading = false, message = '' }) {$/;"	E
 StyledContainer	src/components/Auth/index.js	/^export const StyledContainer = styled(Container)`$/;"	E
@@ -66,6 +75,7 @@ SubmitContainer	src/components/PersonalInformationForm/index.js	/^const SubmitCo
 Timer	src/pages/Countdown/Timer.js	/^export default function Timer({ time, onZero = () => 0 }) {$/;"	E
 Title	src/components/Auth/index.js	/^export const Title = styled.h1`$/;"	E
 UserProvider	src/contexts/UserContext.js	/^export function UserProvider({ children }) {$/;"	E
+ValidThru	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const ValidThru = styled.input``;$/;"	S
 act	src/hooks/api/useCep.js	/^    act: getCep,$/;"	P
 act	src/hooks/api/useEnrollment.js	/^    act: getEnrollment$/;"	P
 act	src/hooks/api/useSaveEnrollment.js	/^    act: saveEnrollment$/;"	P
