@@ -1,28 +1,15 @@
 import styled from 'styled-components';
 
 export default function ReserveConfirm({ value }) {
-  let renderReserveConfirm = false;
-
   return (
-    <>
-      {
-        renderReserveConfirm ?
-          <div>
-            <SubmitContainer>
-              <p>
-                <span>Fechado! O total ficou em </span>
-                <PriceSpan>{`R$ ${value}`}</PriceSpan>
-                <span>. Agora é só confirmar:</span>
-              </p>
-              <button >
-                RESERVAR INGRESSO
-              </button>
-            </SubmitContainer>
-          </div>
-          :
-          <></>
-      }
-    </>
+    <div>
+      <SubmitContainer>
+        <SubTitle>{`Fechado! O total ficou em R$ ${value}. Agora é só confirmar: `}</SubTitle>
+        <button >
+          RESERVAR INGRESSO
+        </button>
+      </SubmitContainer>
+    </div>
   );
 }
 
@@ -49,12 +36,11 @@ const SubmitContainer = styled.div`
   }
 `;
 
-const PriceSpan = styled.span`
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 23px;
-
-  color: black
+export const SubTitle = styled.div`
+   {
+    font-size: 20px;
+    line-height: 23px;
+    color: #8e8e8e;
+    margin-bottom: 10px;
+  }
 `;

@@ -1,35 +1,72 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Options from './options';
 import PaymentContext from '../../../contexts/PaymentContext';
+import useTicketTypes from '../../../hooks/api/useTicketTypes';
+import RenderAccommodation from './Components/Accommodations';
 
 export default function Payment() {
   const { paymentSelected } = useContext(PaymentContext);
-
-  const ticketData = {
+  const { ticketsType } = useTicketTypes();
+  const [ticketData, setTicketData] = useState({
     type: 'ticket',
-    options: [
-      { name: 'Presencial', price: 250 },
-      { name: 'Online', price: 100 },
-    ],
-  };
-
-  /*  const accommodationData = {
+    options: []
+  });
+  const [accommodationData, setAccommodationData] = useState({
     type: 'accommodation',
-    options: [
-      { name: 'Sem Hotel', price: 0 },
-      { name: 'Com Hotel', price: 350 },
-    ],
-  }; */
+    options: []
+  });
+
+  function ticketsTypesFilter() {
+    const ticketOptionsFilter = [];
+
+    if (ticketsType) {
+      for (let i = 0; i < ticketsType.length; i++) {
+        if (!ticketsType[i].isRemote && ticketsType[i].includesHotel) {
+          continue;
+        }
+        else {
+          ticketOptionsFilter.push(ticketsType[i]);
+        }
+      }
+    }
+
+    return ticketOptionsFilter;
+  }
+
+  function accommodationsFilter() {
+    const accommodationOptionsFilter = [];
+
+    if (ticketsType) {
+      for (let j = 0; j < ticketsType.length; j++) {
+        if (ticketsType[j].isRemote) {
+          continue;
+        } else {
+          accommodationOptionsFilter.push(ticketsType[j]);
+        }
+      }
+    }
+    return accommodationOptionsFilter;
+  }
+
+  useEffect(() => {
+    setTicketData(existingValues => ({
+      ...existingValues,
+      options: ticketsTypesFilter()
+    }));
+    setAccommodationData(existingValues => ({
+      ...existingValues,
+      options: accommodationsFilter()
+    }));
+  }, [ticketsType]);
 
   return (
     <Container>
       <Title>Ingresso e pagamento</Title>
       <SubTitle>Primeiro, escolha sua modalidade de ingresso</SubTitle>
       <Options data={ticketData} />
-      {paymentSelected?.ticket?.id === 0 ? (
-        <>     
-        </>
+      {paymentSelected?.ticket?.price ? (
+        <RenderAccommodation value={paymentSelected.ticket.price} data={accommodationData} />
       ) : (
         <></>
       )}

@@ -9,7 +9,7 @@ export default function Clickbox({ optionData, type }) {
     <Container
       onClick={() => {
         setPaymentSelected((old) => {
-          if (type === 'ticket' && optionData.id === 1) return { ticket: optionData };
+          if (type === 'ticket' && optionData.id !== 1) return { ticket: optionData };
 
           const newer = { ...old };
           newer[type] = optionData;
@@ -18,8 +18,8 @@ export default function Clickbox({ optionData, type }) {
       }}
       style={paymentSelected[type]?.id === optionData.id ? { background: '#FFEED2' } : {}}
     >
-      <Name>{optionData.name}</Name>
-      <Price>R$ {optionData.price}</Price>
+      <Name>{optionData.price === 0 ? 'Sem Hotel' : `${optionData.name}`}</Name>
+      <Price>{type === 'accommodation' ? `+ R$ ${optionData.price}` : `R$ ${optionData.price}`}</Price>
     </Container>
   );
 }

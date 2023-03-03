@@ -4,9 +4,12 @@ import Clickbox from './clickbox';
 export default function Options({ data }) {
   return (
     <Container>
-      {data.options.map((optionData, index) => {
-        return <Clickbox type={data.type} optionData={{ ...optionData, id: index }} key={index}/>;
-      })}
+      {data.options ?
+        data.options.map((optionData, index) => {
+          return <Clickbox type={data.type} optionData={{ ...optionData, ticketTypeId: optionData.id, id: index }} key={index}/>;
+        }):
+        <></>
+      }
     </Container>
   );
 }
