@@ -4,8 +4,10 @@ import Options from './options';
 import PaymentContext from '../../../contexts/PaymentContext';
 import useTicketTypes from '../../../hooks/api/useTicketTypes';
 import RenderAccommodation from './Components/Accommodations';
+import PaymentGateway from './Components/PaymentGateway';
 
 export default function Payment() {
+  const [getTicketUser, setTicketUser] = useState(false);
   const { paymentSelected } = useContext(PaymentContext);
   const { ticketsType } = useTicketTypes();
   const [ticketData, setTicketData] = useState({
@@ -62,13 +64,19 @@ export default function Payment() {
 
   return (
     <Container>
-      <Title>Ingresso e pagamento</Title>
-      <SubTitle>Primeiro, escolha sua modalidade de ingresso</SubTitle>
-      <Options data={ticketData} />
-      {paymentSelected?.ticket?.price ? (
-        <RenderAccommodation value={paymentSelected.ticket.price} data={accommodationData} />
+      {!getTicketUser ? (
+        <>
+          <Title>Ingresso e pagamento</Title>
+          <SubTitle>Primeiro, escolha sua modalidade de ingresso</SubTitle>
+          <Options data={ticketData} />
+          {paymentSelected?.ticket?.price ? (
+            <RenderAccommodation value={paymentSelected.ticket.price} data={accommodationData} />
+          ) : (
+            <></>
+          )}
+        </>
       ) : (
-        <></>
+        <PaymentGateway />
       )}
     </Container>
   );
