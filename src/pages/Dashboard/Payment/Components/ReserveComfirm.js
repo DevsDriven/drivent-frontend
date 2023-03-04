@@ -1,11 +1,42 @@
 import styled from 'styled-components';
+import { useContext, useEffect, useState } from 'react';
+import PaymentContext from '../../../../contexts/PaymentContext';
+import { toast } from 'react-toastify';
+import useTicketUser from '../../../../hooks/api/useTicketUser';
 
 export default function ReserveConfirm({ value }) {
+  const { paymentSelected } = useContext(PaymentContext);
+  const [paramsTicketTypeId, setParamsTicketTypeId] = useState(paymentSelected.ticket.ticketTypeId);
+  const [loadingButton, setLoadingButton] = useState(false);
+  const { createTicket } = useTicketUser();
+
+  function selectParamsFromTicketApi(paymentSelected) {
+    if(!paymentSelected.ticket.isRemote) {
+      setParamsTicketTypeId(paymentSelected.accommodation.ticketTypeId);
+    };
+  };
+
+  useEffect(() => {
+    selectParamsFromTicketApi(paymentSelected);
+  }, [paymentSelected]);
+
+  async function request(paramsTicketTypeId) {
+    setLoadingButton(true);
+    try {
+      await createTicket({ ticketTypeId: paramsTicketTypeId });
+      setLoadingButton(false);
+      toast('Seu ingresso foi reservado');
+    } catch (error) {
+      toast('Não foi possível reservar o seu ingresso!');
+      setLoadingButton(false);
+    }
+  };
+
   return (
     <div>
       <SubmitContainer>
         <SubTitle>{`Fechado! O total ficou em R$ ${value}. Agora é só confirmar: `}</SubTitle>
-        <button >
+        <button onClick={() => request(paramsTicketTypeId)} disabled={loadingButton}>
           RESERVAR INGRESSO
         </button>
       </SubmitContainer>
