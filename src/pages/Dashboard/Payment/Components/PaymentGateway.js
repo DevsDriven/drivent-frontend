@@ -1,16 +1,71 @@
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import PaymentForm from '../../../../components/Dashboard/Payment/CreditCard';
+
 export default function PaymentGateway() {
-  return {
-    /* 
-      Payment Container
-        Information Container 
-          Card Information Container
-          Form Container
-            Card Number
-            Name
-            Sensitive Card Info
-              Valid Thru 
-              CVC
-        Confirm Button
-    */
+  const [state, setState] = useState({
+    number: '',
+    expiry: '',
+    cvc: '',
+    name: '',
+    focus: '',
+    formData: null,
+  });
+
+  const handleInputChange = (evt) => {
+    const { name, value } = evt.target;
+
+    setState((prev) => ({ ...prev, [name]: value }));
   };
+
+  const handleInputFocus = (evt) => {
+    setState((prev) => ({ ...prev, focus: evt.target.name }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setState({
+      number: '',
+      expiry: '',
+      cvc: '',
+      name: '',
+      focus: '',
+      formData: null,
+    });
+    console.log(state);
+  };
+
+  return (
+    <PaymentContainer>
+      <PaymentLabel>Pagamento</PaymentLabel>
+      <PaymentForm
+        state={state}
+        handleInputChange={handleInputChange}
+        handleInputFocus={handleInputFocus}
+        handleSubmit={handleSubmit}
+      />
+      <ConfirmButton onClick={handleSubmit}>Finalizar Pagamento</ConfirmButton>
+    </PaymentContainer>
+  );
 }
+
+const PaymentContainer = styled.div`
+  width: 100%;
+`;
+
+const PaymentLabel = styled.h1`
+  font-size: 20px;
+  color: #8e8e8e;
+`;
+
+const ConfirmButton = styled.button`
+  width: 182px;
+  height: 37px;
+  margin-top: 40px;
+  background-color: #e0e0e0;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  border: 0;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+`;
