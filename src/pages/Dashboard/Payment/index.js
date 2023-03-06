@@ -5,6 +5,8 @@ import PaymentContext from '../../../contexts/PaymentContext';
 import useTicketTypes from '../../../hooks/api/useTicketTypes';
 import RenderAccommodation from './Components/Accommodations';
 import PaymentGateway from './Components/PaymentGateway';
+import NoEnrollment from './noenrollment';
+import useEnrollment from '../../../hooks/api/useEnrollment';
 
 export default function Payment() {
   const [getTicketUser, setTicketUser] = useState(false);
@@ -61,6 +63,12 @@ export default function Payment() {
       options: accommodationsFilter()
     }));
   }, [ticketsType]);
+
+  const { enrollment } = useEnrollment();
+
+  if (!enrollment) {
+    return <NoEnrollment />;
+  }
 
   return (
     <Container>
