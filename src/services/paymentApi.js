@@ -10,14 +10,11 @@ export async function paymentProcess(token, state, paymentSelected) {
     ticketId,
     cardData
   };
-  console.log(ticketId);
-  console.log(body);
   const response = await api.post('/payments/process', body, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
   });
 
-  console.log(response.data);
   return response.data;
 }

@@ -22,6 +22,5 @@ export default function useLocalStorage(key, initialValue) {
       console.log(error);
     }
   };
-  console.log(storedValue);
   return [storedValue, setValue];
 }

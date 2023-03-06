@@ -4,10 +4,12 @@ import styled from 'styled-components';
 import PaymentForm from '../../../../components/Dashboard/Payment/CreditCard';
 import usePayment from '../../../../hooks/api/usePayment';
 import PaymentContext from '../../../../contexts/PaymentContext';
+import useTicket from '../../../../hooks/api/useTicket';
 
 export default function PaymentGateway() {
-  const { state, setState, paymentSelected } = useContext(PaymentContext);
-  const { postPayment } = usePayment(); 
+  const { state, setState, paymentSelected, setPaymentSelected } = useContext(PaymentContext);
+  const { postPayment } = usePayment();
+  const { getTicket } = useTicket();
 
   useEffect(() => {
     if (state.number !== '') {
@@ -31,11 +33,14 @@ export default function PaymentGateway() {
     setState((prev) => ({ ...prev, focus: evt.target.name }));
   };
 
-  const handleSubmit = async e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(state);
-    const payment = await postPayment(state, paymentSelected);
-    console.log(payment);
+    const payment = postPayment(state, paymentSelected);
+    const ticket = getTicket();
+    setPaymentSelected({
+      ...paymentSelected,
+      ticketStatus: ticket.status,
+    });
     setState({
       number: '',
       expiry: '',
@@ -49,13 +54,6 @@ export default function PaymentGateway() {
 
   return (
     <>
-      <TicketInfoContainer>
-        <h1>Ingresso escolhido</h1>
-        <TicketReceipt>
-          <h1>Tipo de evento + tipo de hotel</h1>
-          <h2>Valor total</h2>
-        </TicketReceipt>
-      </TicketInfoContainer>
       <PaymentContainer>
         <PaymentLabel>Pagamento</PaymentLabel>
         <PaymentForm
@@ -66,13 +64,6 @@ export default function PaymentGateway() {
         />
         <ConfirmButton onClick={handleSubmit}>Finalizar Pagamento</ConfirmButton>
       </PaymentContainer>
-      <ReceiptContainer>
-        <Icon></Icon>
-        <>
-          <h1>Pagamento confirmado!</h1>
-          <h2>Prossiga para escolha de hospedagem e atividades</h2>
-        </>
-      </ReceiptContainer>
     </>
   );
 }
@@ -101,7 +92,3 @@ const ConfirmButton = styled.button`
   font-weight: 400;
   font-size: 14px;
 `;
-
-const ReceiptContainer = styled.div``;
-
-const Icon = styled.img``;

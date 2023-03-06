@@ -41,7 +41,6 @@ FormWrapper	src/components/PersonalInformationForm/FormWrapper.js	/^export const
 Grid	src/components/Splash.js	/^const Grid = styled.div`$/;"	S
 Grid	src/pages/Countdown/Timer.js	/^const Grid = styled.div`$/;"	S
 Hotel	src/pages/Dashboard/Hotel/index.js	/^export default function Hotel() {$/;"	E
-Icon	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const Icon = styled.img``;$/;"	S
 Input	src/components/Form/Input.js	/^export default function Input({ mask = '', maskChar = '', formatChars, variant = 'outlined', value='', onChange = () => 0, ...props }) {$/;"	E
 InputWrapper	src/components/PersonalInformationForm/InputWrapper.js	/^export const InputWrapper = styled.div`$/;"	E
 Label	src/components/Auth/index.js	/^export const Label = styled.h1`$/;"	E
@@ -59,10 +58,12 @@ PaymentForm	src/components/Dashboard/Payment/CreditCard.js	/^const PaymentForm =
 PaymentGateway	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^export default function PaymentGateway() {$/;"	E
 PaymentLabel	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const PaymentLabel = styled.h1`$/;"	S
 PaymentProvider	src/contexts/PaymentContext.js	/^export function PaymentProvider({ children }) {$/;"	E
+PaymentTitle	src/pages/Dashboard/Payment/index.js	/^const PaymentTitle = styled.h1`$/;"	S
 PersonalInformationForm	src/components/PersonalInformationForm/index.js	/^export default function PersonalInformationForm() {$/;"	E
 Price	src/pages/Dashboard/Payment/clickbox.js	/^export const Price = styled.div`$/;"	E
 ProtectedRouteGuard	src/App.js	/^function ProtectedRouteGuard({ children }) {$/;"	F
-ReceiptContainer	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const ReceiptContainer = styled.div``;$/;"	S
+ReceiptContainer	src/pages/Dashboard/Payment/index.js	/^const ReceiptContainer = styled.div`$/;"	S
+ReceiptTextConfirm	src/pages/Dashboard/Payment/index.js	/^const ReceiptTextConfirm = styled.div`$/;"	S
 RenderAccommodation	src/pages/Dashboard/Payment/Components/Accommodations.js	/^export default function RenderAccommodation({ value, data }) {$/;"	E
 RenderOptionsAccommodation	src/pages/Dashboard/Payment/Components/Accommodations.js	/^  function RenderOptionsAccommodation({ data, paymentSelected }) {$/;"	F
 ReserveConfirm	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^export default function ReserveConfirm({ value }) {$/;"	E
@@ -88,8 +89,11 @@ SubmitContainer	src/components/PersonalInformationForm/index.js	/^const SubmitCo
 SubmitContainer	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^const SubmitContainer = styled.div`$/;"	S
 TicketError	src/hooks/api/useTicketUser.js	/^    TicketError,$/;"	V
 TicketInfoContainer	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const TicketInfoContainer = styled.div``;$/;"	S
+TicketInfoContainer	src/pages/Dashboard/Payment/Components/TicketReceipt.js	/^const TicketInfoContainer = styled.div`$/;"	S
 TicketLoading	src/hooks/api/useTicketUser.js	/^    TicketLoading,$/;"	V
 TicketReceipt	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const TicketReceipt = styled.div``;$/;"	S
+TicketReceipt	src/pages/Dashboard/Payment/Components/TicketReceipt.js	/^export default function TicketReceipt(props) {$/;"	E
+TicketReceiptContainer	src/pages/Dashboard/Payment/Components/TicketReceipt.js	/^const TicketReceiptContainer = styled.div`$/;"	S
 Timer	src/pages/Countdown/Timer.js	/^export default function Timer({ time, onZero = () => 0 }) {$/;"	E
 Title	src/components/Auth/index.js	/^export const Title = styled.h1`$/;"	E
 Title	src/pages/Dashboard/Payment/index.js	/^export const Title = styled.div`$/;"	E
@@ -185,7 +189,9 @@ getCep	src/components/PersonalInformationForm/index.js	/^  const { getCep } = us
 getCep	src/hooks/api/useCep.js	/^    getCep,$/;"	V
 getEnrollment	src/hooks/api/useEnrollment.js	/^    getEnrollment$/;"	V
 getTicket	src/hooks/api/useTicket.js	/^    getTicket,$/;"	V
+getTicket	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const { getTicket } = useTicket();$/;"	V
 getTicket	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^  const { getTicket } = useTicket();$/;"	V
+getTicket	src/pages/Dashboard/Payment/index.js	/^  const { getTicket } = useTicket();$/;"	V
 getTicketTypes	src/hooks/api/useTicketTypes.js	/^    getTicketTypes$/;"	V
 handleCepChanges	src/components/PersonalInformationForm/index.js	/^  async function handleCepChanges(event) {$/;"	F
 handleChange	src/components/PersonalInformationForm/index.js	/^    handleChange,$/;"	V
@@ -199,7 +205,7 @@ handleSubmit	src/components/Dashboard/Payment/CreditCard.js	/^  const { state, h
 handleSubmit	src/components/PersonalInformationForm/index.js	/^    handleSubmit,$/;"	V
 handleSubmit	src/hooks/useForm.js	/^    handleSubmit,$/;"	V
 handleSubmit	src/hooks/useForm.js	/^  const handleSubmit = async(event) => {$/;"	F
-handleSubmit	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const handleSubmit = async e => {$/;"	F
+handleSubmit	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const handleSubmit = (e) => {$/;"	F
 headers	src/services/enrollmentApi.js	/^    headers: {$/;"	P
 headers	src/services/paymentApi.js	/^    headers: {$/;"	P
 headers	src/services/ticketApi.js	/^    headers: {$/;"	P
@@ -247,20 +253,20 @@ newer	src/pages/Dashboard/Payment/clickbox.js	/^          const newer = { ...old
 number	src/components/PersonalInformationForm/FormValidations.js	/^  number: {$/;"	P
 onChange	src/components/Form/Select.js	/^  onChange,$/;"	V
 onZero	src/pages/Countdown/index.js	/^  function onZero() {$/;"	F
-options	src/pages/Dashboard/Payment/index.js	/^    options: []$/;"	P
+options	src/pages/Dashboard/Payment/index.js	/^    options: [],$/;"	P
 paramsTicketTypeId	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^  const [paramsTicketTypeId, setParamsTicketTypeId] = useState(paymentSelected.ticket.ticketTypeId);$/;"	V
 password	src/pages/Enroll/index.js	/^  const [password, setPassword] = useState('');$/;"	V
 password	src/pages/SignIn/index.js	/^  const [password, setPassword] = useState('');$/;"	V
 paymentApi	src/hooks/api/usePayment.js	/^import * as paymentApi from '..\/..\/services\/paymentApi';$/;"	I
 paymentSelected	src/contexts/PaymentContext.js	/^  const [paymentSelected, setPaymentSelected] = useState({$/;"	V
 paymentSelected	src/pages/Dashboard/Payment/Components/Accommodations.js	/^  const { paymentSelected } = useContext(PaymentContext);$/;"	V
-paymentSelected	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const { state, setState, paymentSelected } = useContext(PaymentContext);$/;"	V
+paymentSelected	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const { state, setState, paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
 paymentSelected	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^  const { paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
 paymentSelected	src/pages/Dashboard/Payment/clickbox.js	/^  const { paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
-paymentSelected	src/pages/Dashboard/Payment/index.js	/^  const { paymentSelected } = useContext(PaymentContext);$/;"	V
+paymentSelected	src/pages/Dashboard/Payment/index.js	/^  const { paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
 phone	src/components/PersonalInformationForm/FormValidations.js	/^  phone: {$/;"	P
 postPayment	src/hooks/api/usePayment.js	/^  function postPayment(state, paymentSelected) {$/;"	F
-postPayment	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const { postPayment } = usePayment(); $/;"	V
+postPayment	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const { postPayment } = usePayment();$/;"	V
 printWidth	.prettierrc.js	/^  printWidth: 120,$/;"	P
 request	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^  async function request(paramsTicketTypeId) {$/;"	F
 required	src/components/Dashboard/Payment/CreditCard.js	/^            required$/;"	V
@@ -291,12 +297,15 @@ setParamsTicketTypeId	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/
 setPassword	src/pages/Enroll/index.js	/^  const [password, setPassword] = useState('');$/;"	V
 setPassword	src/pages/SignIn/index.js	/^  const [password, setPassword] = useState('');$/;"	V
 setPaymentSelected	src/contexts/PaymentContext.js	/^  const [paymentSelected, setPaymentSelected] = useState({$/;"	V
+setPaymentSelected	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const { state, setState, paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
 setPaymentSelected	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^  const { paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
 setPaymentSelected	src/pages/Dashboard/Payment/clickbox.js	/^  const { paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
+setPaymentSelected	src/pages/Dashboard/Payment/index.js	/^  const { paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
 setState	src/contexts/PaymentContext.js	/^  const [state, setState] = useState({$/;"	V
-setState	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const { state, setState, paymentSelected } = useContext(PaymentContext);$/;"	V
+setState	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const { state, setState, paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
 setStoredValue	src/hooks/useLocalStorage.js	/^  const [storedValue, setStoredValue] = useState(() => {$/;"	V
 setTicketData	src/pages/Dashboard/Payment/index.js	/^  const [ticketData, setTicketData] = useState({$/;"	V
+setTicketInfo	src/pages/Dashboard/Payment/index.js	/^  const [ticketInfo, setTicketInfo] = useState({});$/;"	V
 setTicketStatus	src/pages/Dashboard/Payment/index.js	/^  const [ticketStatus, setTicketStatus] = useState({ ticketStatus: 'none' });$/;"	V
 setTimeRemaining	src/pages/Countdown/Timer.js	/^  const [timeRemaining, setTimeRemaining] = useState(diffToDate(time));$/;"	V
 setUserData	src/contexts/UserContext.js	/^  const [userData, setUserData] = useLocalStorage('userData', {});$/;"	V
@@ -314,7 +323,7 @@ singleQuote	.prettierrc.js	/^  singleQuote: true,$/;"	P
 state	src/components/Dashboard/Payment/CreditCard.js	/^  const { state, handleInputChange, handleInputFocus, handleSubmit } = props;$/;"	V
 state	src/components/PersonalInformationForm/FormValidations.js	/^  state: {$/;"	P
 state	src/contexts/PaymentContext.js	/^  const [state, setState] = useState({$/;"	V
-state	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const { state, setState, paymentSelected } = useContext(PaymentContext);$/;"	V
+state	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const { state, setState, paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
 storedValue	src/hooks/useLocalStorage.js	/^  const [storedValue, setStoredValue] = useState(() => {$/;"	V
 street	src/components/PersonalInformationForm/FormValidations.js	/^  street: {$/;"	P
 submit	src/pages/Enroll/index.js	/^  async function submit(event) {$/;"	F
@@ -322,11 +331,13 @@ submit	src/pages/SignIn/index.js	/^  async function submit(event) {$/;"	F
 tabWidth	.prettierrc.js	/^  tabWidth: 2,$/;"	P
 tickesTypesApi	src/hooks/api/useTicketUser.js	/^import * as tickesTypesApi from '..\/..\/services\/ticketsTypesApi';$/;"	I
 ticket	src/hooks/api/useTicket.js	/^    ticket,$/;"	V
+ticket	src/pages/Dashboard/Payment/Components/TicketReceipt.js	/^  const { ticket } = props;$/;"	V
 ticketApi	src/hooks/api/useTicket.js	/^import * as ticketApi from '..\/..\/services\/ticketApi';$/;"	I
 ticketData	src/pages/Dashboard/Payment/index.js	/^  const [ticketData, setTicketData] = useState({$/;"	V
 ticketError	src/hooks/api/useTicket.js	/^    ticketError,$/;"	V
 ticketId	src/contexts/PaymentContext.js	/^    ticketId: null$/;"	P
 ticketId	src/services/paymentApi.js	/^    ticketId,$/;"	V
+ticketInfo	src/pages/Dashboard/Payment/index.js	/^  const [ticketInfo, setTicketInfo] = useState({});$/;"	V
 ticketLoading	src/hooks/api/useTicket.js	/^    ticketLoading,$/;"	V
 ticketOptionsFilter	src/pages/Dashboard/Payment/index.js	/^    const ticketOptionsFilter = [];$/;"	A
 ticketStatus	src/pages/Dashboard/Payment/index.js	/^  const [ticketStatus, setTicketStatus] = useState({ ticketStatus: 'none' });$/;"	V
