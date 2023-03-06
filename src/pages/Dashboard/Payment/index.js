@@ -7,7 +7,7 @@ import RenderAccommodation from './Components/Accommodations';
 import PaymentGateway from './Components/PaymentGateway';
 
 export default function Payment() {
-  const [getTicketUser, setTicketUser] = useState({});
+  const [getTicketUser, setTicketUser] = useState(false);
   const { paymentSelected } = useContext(PaymentContext);
   const { ticketsType } = useTicketTypes();
   const [ticketData, setTicketData] = useState({
@@ -18,6 +18,8 @@ export default function Payment() {
     type: 'accommodation',
     options: []
   });
+  console.log(getTicketUser);
+  console.log(paymentSelected);
 
   function ticketsTypesFilter() {
     const ticketOptionsFilter = [];
@@ -60,7 +62,7 @@ export default function Payment() {
       ...existingValues,
       options: accommodationsFilter()
     }));
-  }, [ticketsType]);
+  }, [ticketsType, paymentSelected]);
 
   return (
     <Container>

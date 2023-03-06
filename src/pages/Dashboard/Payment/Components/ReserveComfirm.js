@@ -3,18 +3,20 @@ import { useContext, useEffect, useState } from 'react';
 import PaymentContext from '../../../../contexts/PaymentContext';
 import { toast } from 'react-toastify';
 import useTicketUser from '../../../../hooks/api/useTicketUser';
+import useTicket from '../../../../hooks/api/useTicket';
 
 export default function ReserveConfirm({ value }) {
-  const { paymentSelected } = useContext(PaymentContext);
+  const { paymentSelected, setPaymentSelected } = useContext(PaymentContext);
   const [paramsTicketTypeId, setParamsTicketTypeId] = useState(paymentSelected.ticket.ticketTypeId);
   const [loadingButton, setLoadingButton] = useState(false);
   const { createTicket } = useTicketUser();
+  const { getTicket } = useTicket();
 
   function selectParamsFromTicketApi(paymentSelected) {
-    if(!paymentSelected.ticket.isRemote) {
+    if (!paymentSelected.ticket.isRemote) {
       setParamsTicketTypeId(paymentSelected.accommodation.ticketTypeId);
-    };
-  };
+    }
+  }
 
   useEffect(() => {
     selectParamsFromTicketApi(paymentSelected);
@@ -26,11 +28,16 @@ export default function ReserveConfirm({ value }) {
       await createTicket({ ticketTypeId: paramsTicketTypeId });
       setLoadingButton(false);
       toast('Seu ingresso foi reservado');
+      const ticket = await getTicket();
+      setPaymentSelected({
+        ...paymentSelected,
+        status: ticket.status
+      });
     } catch (error) {
       toast('Não foi possível reservar o seu ingresso!');
       setLoadingButton(false);
     }
-  };
+  }
 
   return (
     <div>
@@ -45,14 +52,14 @@ export default function ReserveConfirm({ value }) {
 }
 
 const SubmitContainer = styled.div`
-  margin-top: 40px!important;
-  width: 100%!important;
+  margin-top: 40px !important;
+  width: 100% !important;
 
   > button {
     width: 162px;
     height: 37px;
     margin-top: 15px !important;
-    background: #E0E0E0;
+    background: #e0e0e0;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
   }
@@ -63,7 +70,7 @@ const SubmitContainer = styled.div`
     font-size: 20px;
     line-height: 23px;
 
-    color: #9C9C9C;
+    color: #9c9c9c;
   }
 `;
 
