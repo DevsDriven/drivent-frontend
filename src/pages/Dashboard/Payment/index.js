@@ -5,21 +5,26 @@ import PaymentContext from '../../../contexts/PaymentContext';
 import useTicketTypes from '../../../hooks/api/useTicketTypes';
 import RenderAccommodation from './Components/Accommodations';
 import PaymentGateway from './Components/PaymentGateway';
+import useTicket from '../../../hooks/api/useTicket';
+import TicketReceipt from './Components/TicketReceipt';
+import { BsCheckCircle } from 'react-icons/bs';
 import NoEnrollment from './noenrollment';
 import useEnrollment from '../../../hooks/api/useEnrollment';
 
 export default function Payment() {
-  const [getTicketUser, setTicketUser] = useState(false);
-  const { paymentSelected } = useContext(PaymentContext);
+  const [ticketStatus, setTicketStatus] = useState({ ticketStatus: 'none' });
+  const { paymentSelected, setPaymentSelected } = useContext(PaymentContext);
   const { ticketsType } = useTicketTypes();
   const [ticketData, setTicketData] = useState({
     type: 'ticket',
-    options: []
+    options: [],
   });
   const [accommodationData, setAccommodationData] = useState({
     type: 'accommodation',
-    options: []
+    options: [],
   });
+  const { getTicket } = useTicket();
+  const [ticketInfo, setTicketInfo] = useState({});
 
   function ticketsTypesFilter() {
     const ticketOptionsFilter = [];
@@ -28,8 +33,7 @@ export default function Payment() {
       for (let i = 0; i < ticketsType.length; i++) {
         if (!ticketsType[i].isRemote && ticketsType[i].includesHotel) {
           continue;
-        }
-        else {
+        } else {
           ticketOptionsFilter.push(ticketsType[i]);
         }
       }
@@ -54,16 +58,21 @@ export default function Payment() {
   }
 
   useEffect(() => {
-    setTicketData(existingValues => ({
+    setTicketData((existingValues) => ({
       ...existingValues,
-      options: ticketsTypesFilter()
+      options: ticketsTypesFilter(),
     }));
-    setAccommodationData(existingValues => ({
+    setAccommodationData((existingValues) => ({
       ...existingValues,
-      options: accommodationsFilter()
+      options: accommodationsFilter(),
     }));
   }, [ticketsType]);
 
+  useEffect(async() => {
+    const ticket = await getTicket();
+    setTicketInfo(ticket);
+    setTicketStatus({ ticketStatus: ticket.status });
+  }, [paymentSelected]);
   const { enrollment } = useEnrollment();
 
   if (!enrollment) {
@@ -72,9 +81,9 @@ export default function Payment() {
 
   return (
     <Container>
-      {!getTicketUser ? (
+      <Title>Ingresso e pagamento</Title>
+      {ticketStatus.ticketStatus === 'none' && (
         <>
-          <Title>Ingresso e pagamento</Title>
           <SubTitle>Primeiro, escolha sua modalidade de ingresso</SubTitle>
           <Options data={ticketData} />
           {paymentSelected?.ticket?.price ? (
@@ -83,8 +92,25 @@ export default function Payment() {
             <></>
           )}
         </>
-      ) : (
-        <PaymentGateway />
+      )}
+      {ticketStatus.ticketStatus === 'RESERVED' && (
+        <>
+          <TicketReceipt ticket={ticketInfo} />
+          <PaymentGateway />
+        </>
+      )}
+      {ticketStatus.ticketStatus === 'PAID' && (
+        <>
+          <TicketReceipt ticket={ticketInfo} />
+          <PaymentTitle>Pagamento</PaymentTitle>
+          <ReceiptContainer>
+            <BsCheckCircle />
+            <ReceiptTextConfirm>
+              <h2>Pagamento confirmado!</h2>
+              <h3>Prossiga para escolha de hospedagem e atividades</h3>
+            </ReceiptTextConfirm>
+          </ReceiptContainer>
+        </>
       )}
     </Container>
   );
@@ -112,5 +138,43 @@ export const SubTitle = styled.div`
     line-height: 23px;
     color: #8e8e8e;
     margin-bottom: 10px;
+  }
+`;
+
+const PaymentTitle = styled.h1`
+  margin-bottom: 19px;
+  font-size: 20px;
+  color: #8E8E8E;
+`;
+
+const ReceiptContainer = styled.div`
+  display: flex;
+  align-items: center;
+
+  h1 {
+    font-size: 20px;
+    color: #8E8E8E;
+  }
+
+  svg {
+    fill: green;
+    height: 44px;
+    width: 44px;
+  }
+`;
+
+const ReceiptTextConfirm = styled.div`
+  margin-left: 12px;
+
+  h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #454545;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #454545;
   }
 `;
