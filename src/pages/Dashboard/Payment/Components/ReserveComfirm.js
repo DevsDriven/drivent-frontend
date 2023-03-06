@@ -29,7 +29,6 @@ export default function ReserveConfirm({ value }) {
       setLoadingButton(false);
       toast('Seu ingresso foi reservado');
       const ticket = await getTicket();
-      console.log(ticket);
       setPaymentSelected({
         ...paymentSelected,
         ticketStatus: ticket.status,
@@ -58,9 +57,12 @@ const SubmitContainer = styled.div`
   width: 100% !important;
 
   > button {
-    width: 162px;
-    height: 37px;
-    margin-top: 15px !important;
+    border: none;
+    width: fit-content;
+    height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
     background: #e0e0e0;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
@@ -84,3 +86,4 @@ export const SubTitle = styled.div`
     margin-bottom: 10px;
   }
 `;
+
