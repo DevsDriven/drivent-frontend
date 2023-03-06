@@ -36,18 +36,38 @@ export default function PaymentGateway() {
   };
 
   return (
-    <PaymentContainer>
-      <PaymentLabel>Pagamento</PaymentLabel>
-      <PaymentForm
-        state={state}
-        handleInputChange={handleInputChange}
-        handleInputFocus={handleInputFocus}
-        handleSubmit={handleSubmit}
-      />
-      <ConfirmButton onClick={handleSubmit}>Finalizar Pagamento</ConfirmButton>
-    </PaymentContainer>
+    <>
+      <TicketInfoContainer>
+        <h1>Ingresso escolhido</h1>
+        <TicketReceipt>
+          <h1>Tipo de evento + tipo de hotel</h1>
+          <h2>Valor total</h2>
+        </TicketReceipt>
+      </TicketInfoContainer>
+      <PaymentContainer>
+        <PaymentLabel>Pagamento</PaymentLabel>
+        <PaymentForm
+          state={state}
+          handleInputChange={handleInputChange}
+          handleInputFocus={handleInputFocus}
+          handleSubmit={handleSubmit}
+        />
+        <ConfirmButton onClick={handleSubmit}>Finalizar Pagamento</ConfirmButton>
+      </PaymentContainer>
+      <ReceiptContainer>
+        <Icon></Icon>
+        <>
+          <h1>Pagamento confirmado!</h1>
+          <h2>Prossiga para escolha de hospedagem e atividades</h2>
+        </>
+      </ReceiptContainer>
+    </>
   );
 }
+
+const TicketInfoContainer = styled.div``;
+
+const TicketReceipt = styled.div``;
 
 const PaymentContainer = styled.div`
   width: 100%;
@@ -69,3 +89,7 @@ const ConfirmButton = styled.button`
   font-weight: 400;
   font-size: 14px;
 `;
+
+const ReceiptContainer = styled.div``;
+
+const Icon = styled.img``;

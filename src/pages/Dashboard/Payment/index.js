@@ -7,7 +7,7 @@ import RenderAccommodation from './Components/Accommodations';
 import PaymentGateway from './Components/PaymentGateway';
 
 export default function Payment() {
-  const [getTicketUser, setTicketUser] = useState(false);
+  const [getTicketUser, setTicketUser] = useState({});
   const { paymentSelected } = useContext(PaymentContext);
   const { ticketsType } = useTicketTypes();
   const [ticketData, setTicketData] = useState({
