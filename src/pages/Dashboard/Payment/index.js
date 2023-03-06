@@ -8,6 +8,8 @@ import PaymentGateway from './Components/PaymentGateway';
 import useTicket from '../../../hooks/api/useTicket';
 import TicketReceipt from './Components/TicketReceipt';
 import { BsCheckCircle } from 'react-icons/bs';
+import NoEnrollment from './noenrollment';
+import useEnrollment from '../../../hooks/api/useEnrollment';
 
 export default function Payment() {
   const [ticketStatus, setTicketStatus] = useState({ ticketStatus: 'none' });
@@ -71,6 +73,11 @@ export default function Payment() {
     setTicketInfo(ticket);
     setTicketStatus({ ticketStatus: ticket.status });
   }, [paymentSelected]);
+  const { enrollment } = useEnrollment();
+
+  if (!enrollment) {
+    return <NoEnrollment />;
+  }
 
   return (
     <Container>

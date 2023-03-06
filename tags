@@ -5,6 +5,7 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 Activities	src/pages/Dashboard/Activities/index.js	/^export default function Activities() {$/;"	E
+AlertWrapper	src/pages/Dashboard/Payment/noenrollment.js	/^const AlertWrapper = styled.div`$/;"	S
 App	src/App.js	/^export default function App() {$/;"	E
 AuthLayout	src/layouts/Auth.js	/^export default function AuthLayout({ background, children }) {$/;"	E
 Button	src/components/Dashboard/NavigationBar/NavigationButton.js	/^const Button = styled.button`$/;"	S
@@ -51,6 +52,7 @@ Name	src/pages/Dashboard/Payment/clickbox.js	/^export const Name = styled.div`$/
 Navigate	src/App.js	/^  Navigate$/;"	V
 NavigationBar	src/components/Dashboard/NavigationBar/index.js	/^export default function NavigationBar() {$/;"	E
 NavigationButton	src/components/Dashboard/NavigationBar/NavigationButton.js	/^export default function NavigationButton({ active, children }) {$/;"	E
+NoEnrollment	src/pages/Dashboard/Payment/noenrollment.js	/^export default function NoEnrollment() {$/;"	E
 Options	src/pages/Dashboard/Payment/options.js	/^export default function Options({ data }) {$/;"	E
 Payment	src/pages/Dashboard/Payment/index.js	/^export default function Payment() {$/;"	E
 PaymentContainer	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const PaymentContainer = styled.div`$/;"	S
@@ -97,6 +99,7 @@ TicketReceiptContainer	src/pages/Dashboard/Payment/Components/TicketReceipt.js	/
 Timer	src/pages/Countdown/Timer.js	/^export default function Timer({ time, onZero = () => 0 }) {$/;"	E
 Title	src/components/Auth/index.js	/^export const Title = styled.h1`$/;"	E
 Title	src/pages/Dashboard/Payment/index.js	/^export const Title = styled.div`$/;"	E
+Title	src/pages/Dashboard/Payment/noenrollment.js	/^const Title = styled.div`$/;"	S
 UserProvider	src/contexts/UserContext.js	/^export function UserProvider({ children }) {$/;"	E
 accommodationData	src/pages/Dashboard/Payment/index.js	/^  const [accommodationData, setAccommodationData] = useState({$/;"	V
 accommodationOptionsFilter	src/pages/Dashboard/Payment/index.js	/^    const accommodationOptionsFilter = [];$/;"	A
@@ -153,6 +156,7 @@ email	src/pages/Enroll/index.js	/^  const [email, setEmail] = useState('');$/;"	
 email	src/pages/SignIn/index.js	/^  const [email, setEmail] = useState('');$/;"	V
 enrollment	src/components/PersonalInformationForm/index.js	/^  const { enrollment } = useEnrollment();$/;"	V
 enrollment	src/hooks/api/useEnrollment.js	/^    enrollment,$/;"	V
+enrollment	src/pages/Dashboard/Payment/index.js	/^  const { enrollment } = useEnrollment();$/;"	V
 enrollmentApi	src/hooks/api/useEnrollment.js	/^import * as enrollmentApi from '..\/..\/services\/enrollmentApi';$/;"	I
 enrollmentApi	src/hooks/api/useSaveEnrollment.js	/^import * as enrollmentApi from '..\/..\/services\/enrollmentApi';$/;"	I
 enrollmentError	src/hooks/api/useEnrollment.js	/^    enrollmentError,$/;"	V
