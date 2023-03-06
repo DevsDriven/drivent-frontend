@@ -1,18 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { getCardType } from 'react-credit-cards-2/lib/utils/cardHelpers';
 import styled from 'styled-components';
 import PaymentForm from '../../../../components/Dashboard/Payment/CreditCard';
+import usePayment from '../../../../hooks/api/usePayment';
+import PaymentContext from '../../../../contexts/PaymentContext';
 
 export default function PaymentGateway() {
-  const [state, setState] = useState({
-    number: '',
-    expiry: '',
-    cvc: '',
-    name: '',
-    issuer: '',
-    focus: '',
-    formData: null,
-  });
+  const { state, setState, paymentSelected } = useContext(PaymentContext);
+  const { postPayment } = usePayment(); 
 
   useEffect(() => {
     if (state.number !== '') {
@@ -36,8 +31,11 @@ export default function PaymentGateway() {
     setState((prev) => ({ ...prev, focus: evt.target.name }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
+    console.log(state);
+    const payment = await postPayment(state, paymentSelected);
+    console.log(payment);
     setState({
       number: '',
       expiry: '',
@@ -47,7 +45,6 @@ export default function PaymentGateway() {
       focus: '',
       formData: null,
     });
-    console.log(state);
   };
 
   return (

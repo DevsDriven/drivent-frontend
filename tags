@@ -111,6 +111,9 @@ address	src/components/PersonalInformationForm/index.js	/^        address: {$/;"
 authApi	src/hooks/api/useSignIn.js	/^import * as authApi from '..\/..\/services\/authApi';$/;"	I
 birthday	src/components/PersonalInformationForm/FormValidations.js	/^  birthday: {$/;"	P
 birthday	src/components/PersonalInformationForm/index.js	/^      birthday: null,$/;"	P
+body	src/services/paymentApi.js	/^  const body = {$/;"	O
+cardData	src/services/paymentApi.js	/^    cardData$/;"	V
+cardData	src/services/paymentApi.js	/^  const cardData = {$/;"	O
 cep	src/components/PersonalInformationForm/FormValidations.js	/^  cep: {$/;"	P
 cep	src/hooks/api/useCep.js	/^    cep,$/;"	V
 cepApi	src/hooks/api/useCep.js	/^import * as cepApi from '..\/..\/services\/cepApi';$/;"	I
@@ -176,8 +179,8 @@ eventInfo	src/pages/SignIn/index.js	/^  const { eventInfo } = useContext(EventIn
 eventLoading	src/contexts/EventInfoContext.js	/^  const { event, eventLoading, eventError } = useEvent();$/;"	V
 eventLoading	src/hooks/api/useEvent.js	/^    eventLoading,$/;"	V
 exports	.prettierrc.js	/^module.exports = {$/;"	P
+formData	src/contexts/PaymentContext.js	/^    formData: null,$/;"	P
 formData	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^      formData: null,$/;"	P
-formData	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^    formData: null,$/;"	P
 getCep	src/components/PersonalInformationForm/index.js	/^  const { getCep } = useCep();$/;"	V
 getCep	src/hooks/api/useCep.js	/^    getCep,$/;"	V
 getEnrollment	src/hooks/api/useEnrollment.js	/^    getEnrollment$/;"	V
@@ -196,8 +199,9 @@ handleSubmit	src/components/Dashboard/Payment/CreditCard.js	/^  const { state, h
 handleSubmit	src/components/PersonalInformationForm/index.js	/^    handleSubmit,$/;"	V
 handleSubmit	src/hooks/useForm.js	/^    handleSubmit,$/;"	V
 handleSubmit	src/hooks/useForm.js	/^  const handleSubmit = async(event) => {$/;"	F
-handleSubmit	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const handleSubmit = (e) => {$/;"	F
+handleSubmit	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const handleSubmit = async e => {$/;"	F
 headers	src/services/enrollmentApi.js	/^    headers: {$/;"	P
+headers	src/services/paymentApi.js	/^    headers: {$/;"	P
 headers	src/services/ticketApi.js	/^    headers: {$/;"	P
 headers	src/services/ticketsTypesApi.js	/^    headers: {$/;"	P
 hours	src/pages/Countdown/Timer.js	/^      let { days, hours, minutes, seconds } = timeRemaining;$/;"	V
@@ -247,12 +251,16 @@ options	src/pages/Dashboard/Payment/index.js	/^    options: []$/;"	P
 paramsTicketTypeId	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^  const [paramsTicketTypeId, setParamsTicketTypeId] = useState(paymentSelected.ticket.ticketTypeId);$/;"	V
 password	src/pages/Enroll/index.js	/^  const [password, setPassword] = useState('');$/;"	V
 password	src/pages/SignIn/index.js	/^  const [password, setPassword] = useState('');$/;"	V
+paymentApi	src/hooks/api/usePayment.js	/^import * as paymentApi from '..\/..\/services\/paymentApi';$/;"	I
 paymentSelected	src/contexts/PaymentContext.js	/^  const [paymentSelected, setPaymentSelected] = useState({$/;"	V
 paymentSelected	src/pages/Dashboard/Payment/Components/Accommodations.js	/^  const { paymentSelected } = useContext(PaymentContext);$/;"	V
+paymentSelected	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const { state, setState, paymentSelected } = useContext(PaymentContext);$/;"	V
 paymentSelected	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^  const { paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
 paymentSelected	src/pages/Dashboard/Payment/clickbox.js	/^  const { paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
 paymentSelected	src/pages/Dashboard/Payment/index.js	/^  const { paymentSelected } = useContext(PaymentContext);$/;"	V
 phone	src/components/PersonalInformationForm/FormValidations.js	/^  phone: {$/;"	P
+postPayment	src/hooks/api/usePayment.js	/^  function postPayment(state, paymentSelected) {$/;"	F
+postPayment	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const { postPayment } = usePayment(); $/;"	V
 printWidth	.prettierrc.js	/^  printWidth: 120,$/;"	P
 request	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^  async function request(paramsTicketTypeId) {$/;"	F
 required	src/components/Dashboard/Payment/CreditCard.js	/^            required$/;"	V
@@ -285,7 +293,8 @@ setPassword	src/pages/SignIn/index.js	/^  const [password, setPassword] = useSta
 setPaymentSelected	src/contexts/PaymentContext.js	/^  const [paymentSelected, setPaymentSelected] = useState({$/;"	V
 setPaymentSelected	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^  const { paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
 setPaymentSelected	src/pages/Dashboard/Payment/clickbox.js	/^  const { paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
-setState	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const [state, setState] = useState({$/;"	V
+setState	src/contexts/PaymentContext.js	/^  const [state, setState] = useState({$/;"	V
+setState	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const { state, setState, paymentSelected } = useContext(PaymentContext);$/;"	V
 setStoredValue	src/hooks/useLocalStorage.js	/^  const [storedValue, setStoredValue] = useState(() => {$/;"	V
 setTicketData	src/pages/Dashboard/Payment/index.js	/^  const [ticketData, setTicketData] = useState({$/;"	V
 setTicketStatus	src/pages/Dashboard/Payment/index.js	/^  const [ticketStatus, setTicketStatus] = useState({ ticketStatus: 'none' });$/;"	V
@@ -304,7 +313,8 @@ signUpLoading	src/hooks/api/useSignUp.js	/^    signUpLoading,$/;"	V
 singleQuote	.prettierrc.js	/^  singleQuote: true,$/;"	P
 state	src/components/Dashboard/Payment/CreditCard.js	/^  const { state, handleInputChange, handleInputFocus, handleSubmit } = props;$/;"	V
 state	src/components/PersonalInformationForm/FormValidations.js	/^  state: {$/;"	P
-state	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const [state, setState] = useState({$/;"	V
+state	src/contexts/PaymentContext.js	/^  const [state, setState] = useState({$/;"	V
+state	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const { state, setState, paymentSelected } = useContext(PaymentContext);$/;"	V
 storedValue	src/hooks/useLocalStorage.js	/^  const [storedValue, setStoredValue] = useState(() => {$/;"	V
 street	src/components/PersonalInformationForm/FormValidations.js	/^  street: {$/;"	P
 submit	src/pages/Enroll/index.js	/^  async function submit(event) {$/;"	F
@@ -315,6 +325,8 @@ ticket	src/hooks/api/useTicket.js	/^    ticket,$/;"	V
 ticketApi	src/hooks/api/useTicket.js	/^import * as ticketApi from '..\/..\/services\/ticketApi';$/;"	I
 ticketData	src/pages/Dashboard/Payment/index.js	/^  const [ticketData, setTicketData] = useState({$/;"	V
 ticketError	src/hooks/api/useTicket.js	/^    ticketError,$/;"	V
+ticketId	src/contexts/PaymentContext.js	/^    ticketId: null$/;"	P
+ticketId	src/services/paymentApi.js	/^    ticketId,$/;"	V
 ticketLoading	src/hooks/api/useTicket.js	/^    ticketLoading,$/;"	V
 ticketOptionsFilter	src/pages/Dashboard/Payment/index.js	/^    const ticketOptionsFilter = [];$/;"	A
 ticketStatus	src/pages/Dashboard/Payment/index.js	/^  const [ticketStatus, setTicketStatus] = useState({ ticketStatus: 'none' });$/;"	V
@@ -333,6 +345,7 @@ useEvent	src/hooks/api/useEvent.js	/^export default function useEvent() {$/;"	E
 useForm	src/hooks/useForm.js	/^export const useForm = (options) => {$/;"	E
 useIsDateAfter	src/hooks/useIsDateAfter.js	/^export default function useIsDateAfter(date) {$/;"	E
 useLocalStorage	src/hooks/useLocalStorage.js	/^export default function useLocalStorage(key, initialValue) {$/;"	E
+usePayment	src/hooks/api/usePayment.js	/^export default function usePayment() {$/;"	E
 useSaveEnrollment	src/hooks/api/useSaveEnrollment.js	/^export default function useSaveEnrollment() {$/;"	E
 useSignUp	src/hooks/api/useSignIn.js	/^export default function useSignUp() {$/;"	E
 useSignUp	src/hooks/api/useSignUp.js	/^export default function useSignUp() {$/;"	E
@@ -342,7 +355,6 @@ useTicketUser	src/hooks/api/useTicketUser.js	/^export default function useTicket
 useToken	src/hooks/useToken.js	/^export default function useToken() {$/;"	E
 userApi	src/hooks/api/useSignUp.js	/^import * as userApi from '..\/..\/services\/userApi';$/;"	I
 userData	src/contexts/UserContext.js	/^  const [userData, setUserData] = useLocalStorage('userData', {});$/;"	V
-userData	src/hooks/api/useTicket.js	/^  const { userData } = useContext(UserContext);$/;"	V
 userData	src/hooks/useToken.js	/^  const { userData: user } = useContext(UserContext);$/;"	V
 validations	src/components/PersonalInformationForm/FormValidations.js	/^const validations = {$/;"	O
 validations	src/components/PersonalInformationForm/index.js	/^    validations: FormValidations,$/;"	P

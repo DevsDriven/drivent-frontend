@@ -5,12 +5,21 @@ export default PaymentContext;
 
 export function PaymentProvider({ children }) {
   const [paymentSelected, setPaymentSelected] = useState({
-    ticketStatus: 'none'
+    ticketStatus: 'none',
+    ticketId: null
   });
-  console.log(paymentSelected);
+  const [state, setState] = useState({
+    number: '',
+    expiry: '',
+    cvc: '',
+    name: '',
+    issuer: '',
+    focus: '',
+    formData: null,
+  });
 
   return (
-    <PaymentContext.Provider value={{ paymentSelected, setPaymentSelected }}>
+    <PaymentContext.Provider value={{ paymentSelected, setPaymentSelected, state, setState }}>
       {children}
     </PaymentContext.Provider>
   );
