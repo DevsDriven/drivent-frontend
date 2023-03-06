@@ -31,7 +31,7 @@ export default function ReserveConfirm({ value }) {
       const ticket = await getTicket();
       setPaymentSelected({
         ...paymentSelected,
-        status: ticket.status
+        ticketStatus: ticket.status
       });
     } catch (error) {
       toast('Não foi possível reservar o seu ingresso!');

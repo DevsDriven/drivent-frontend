@@ -54,6 +54,7 @@ const PaymentForm = (props) => {
             onFocus={handleInputFocus}
           />
         </SensitiveInfoContainer>
+        <input type='hidden' name='issuer' value={state.issuer} />
       </Form>
     </CardContainer>
   );

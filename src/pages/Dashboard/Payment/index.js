@@ -7,7 +7,7 @@ import RenderAccommodation from './Components/Accommodations';
 import PaymentGateway from './Components/PaymentGateway';
 
 export default function Payment() {
-  const [getTicketUser, setTicketUser] = useState(false);
+  const [ticketStatus, setTicketStatus] = useState({ ticketStatus: 'none' });
   const { paymentSelected } = useContext(PaymentContext);
   const { ticketsType } = useTicketTypes();
   const [ticketData, setTicketData] = useState({
@@ -18,8 +18,8 @@ export default function Payment() {
     type: 'accommodation',
     options: []
   });
-  console.log(getTicketUser);
   console.log(paymentSelected);
+  console.log(ticketStatus);
 
   function ticketsTypesFilter() {
     const ticketOptionsFilter = [];
@@ -62,11 +62,15 @@ export default function Payment() {
       ...existingValues,
       options: accommodationsFilter()
     }));
-  }, [ticketsType, paymentSelected]);
+  }, [ticketsType]);
+
+  useEffect(() => {
+    setTicketStatus({ ticketStatus: paymentSelected.ticketStatus });
+  }, [paymentSelected]);
 
   return (
     <Container>
-      {!getTicketUser ? (
+      {(ticketStatus.ticketStatus === 'none') && (
         <>
           <Title>Ingresso e pagamento</Title>
           <SubTitle>Primeiro, escolha sua modalidade de ingresso</SubTitle>
@@ -77,8 +81,12 @@ export default function Payment() {
             <></>
           )}
         </>
-      ) : (
+      )}
+      {(ticketStatus.ticketStatus === 'RESERVED') && (
         <PaymentGateway />
+      )}
+      {(ticketStatus.ticketStatus === 'PAID') && (
+        <></>
       )}
     </Container>
   );

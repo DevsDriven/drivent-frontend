@@ -4,7 +4,9 @@ const PaymentContext = createContext();
 export default PaymentContext;
 
 export function PaymentProvider({ children }) {
-  const [paymentSelected, setPaymentSelected] = useState({});
+  const [paymentSelected, setPaymentSelected] = useState({
+    ticketStatus: 'none'
+  });
   console.log(paymentSelected);
 
   return (

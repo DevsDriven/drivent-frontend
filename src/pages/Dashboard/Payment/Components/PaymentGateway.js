@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { getCardType } from 'react-credit-cards-2/lib/utils/cardHelpers';
 import styled from 'styled-components';
 import PaymentForm from '../../../../components/Dashboard/Payment/CreditCard';
 
@@ -8,9 +9,22 @@ export default function PaymentGateway() {
     expiry: '',
     cvc: '',
     name: '',
+    issuer: '',
     focus: '',
     formData: null,
   });
+
+  useEffect(() => {
+    if (state.number !== '') {
+      const number = parseInt(state.number);
+      const issuerName = getCardType(number);
+      if (issuerName === 'unknown') {
+        return;
+      } else {
+        setState({ ...state, issuer: issuerName });
+      }
+    }
+  }, [state.number]);
 
   const handleInputChange = (evt) => {
     const { name, value } = evt.target;
@@ -29,6 +43,7 @@ export default function PaymentGateway() {
       expiry: '',
       cvc: '',
       name: '',
+      issuer: '',
       focus: '',
       formData: null,
     });

@@ -184,7 +184,6 @@ getEnrollment	src/hooks/api/useEnrollment.js	/^    getEnrollment$/;"	V
 getTicket	src/hooks/api/useTicket.js	/^    getTicket,$/;"	V
 getTicket	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^  const { getTicket } = useTicket();$/;"	V
 getTicketTypes	src/hooks/api/useTicketTypes.js	/^    getTicketTypes$/;"	V
-getTicketUser	src/pages/Dashboard/Payment/index.js	/^  const [getTicketUser, setTicketUser] = useState(false);$/;"	V
 handleCepChanges	src/components/PersonalInformationForm/index.js	/^  async function handleCepChanges(event) {$/;"	F
 handleChange	src/components/PersonalInformationForm/index.js	/^    handleChange,$/;"	V
 handleChange	src/hooks/useForm.js	/^    handleChange,$/;"	V
@@ -248,7 +247,7 @@ options	src/pages/Dashboard/Payment/index.js	/^    options: []$/;"	P
 paramsTicketTypeId	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^  const [paramsTicketTypeId, setParamsTicketTypeId] = useState(paymentSelected.ticket.ticketTypeId);$/;"	V
 password	src/pages/Enroll/index.js	/^  const [password, setPassword] = useState('');$/;"	V
 password	src/pages/SignIn/index.js	/^  const [password, setPassword] = useState('');$/;"	V
-paymentSelected	src/contexts/PaymentContext.js	/^  const [paymentSelected, setPaymentSelected] = useState({});$/;"	V
+paymentSelected	src/contexts/PaymentContext.js	/^  const [paymentSelected, setPaymentSelected] = useState({$/;"	V
 paymentSelected	src/pages/Dashboard/Payment/Components/Accommodations.js	/^  const { paymentSelected } = useContext(PaymentContext);$/;"	V
 paymentSelected	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^  const { paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
 paymentSelected	src/pages/Dashboard/Payment/clickbox.js	/^  const { paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
@@ -283,13 +282,13 @@ setLoadingButton	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^  co
 setParamsTicketTypeId	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^  const [paramsTicketTypeId, setParamsTicketTypeId] = useState(paymentSelected.ticket.ticketTypeId);$/;"	V
 setPassword	src/pages/Enroll/index.js	/^  const [password, setPassword] = useState('');$/;"	V
 setPassword	src/pages/SignIn/index.js	/^  const [password, setPassword] = useState('');$/;"	V
-setPaymentSelected	src/contexts/PaymentContext.js	/^  const [paymentSelected, setPaymentSelected] = useState({});$/;"	V
+setPaymentSelected	src/contexts/PaymentContext.js	/^  const [paymentSelected, setPaymentSelected] = useState({$/;"	V
 setPaymentSelected	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^  const { paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
 setPaymentSelected	src/pages/Dashboard/Payment/clickbox.js	/^  const { paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
 setState	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const [state, setState] = useState({$/;"	V
 setStoredValue	src/hooks/useLocalStorage.js	/^  const [storedValue, setStoredValue] = useState(() => {$/;"	V
 setTicketData	src/pages/Dashboard/Payment/index.js	/^  const [ticketData, setTicketData] = useState({$/;"	V
-setTicketUser	src/pages/Dashboard/Payment/index.js	/^  const [getTicketUser, setTicketUser] = useState(false);$/;"	V
+setTicketStatus	src/pages/Dashboard/Payment/index.js	/^  const [ticketStatus, setTicketStatus] = useState({ ticketStatus: 'none' });$/;"	V
 setTimeRemaining	src/pages/Countdown/Timer.js	/^  const [timeRemaining, setTimeRemaining] = useState(diffToDate(time));$/;"	V
 setUserData	src/contexts/UserContext.js	/^  const [userData, setUserData] = useLocalStorage('userData', {});$/;"	V
 setUserData	src/pages/SignIn/index.js	/^  const { setUserData } = useContext(UserContext);$/;"	V
@@ -318,6 +317,7 @@ ticketData	src/pages/Dashboard/Payment/index.js	/^  const [ticketData, setTicket
 ticketError	src/hooks/api/useTicket.js	/^    ticketError,$/;"	V
 ticketLoading	src/hooks/api/useTicket.js	/^    ticketLoading,$/;"	V
 ticketOptionsFilter	src/pages/Dashboard/Payment/index.js	/^    const ticketOptionsFilter = [];$/;"	A
+ticketStatus	src/pages/Dashboard/Payment/index.js	/^  const [ticketStatus, setTicketStatus] = useState({ ticketStatus: 'none' });$/;"	V
 ticketTypeError	src/hooks/api/useTicketTypes.js	/^    ticketTypeError,$/;"	V
 ticketTypeLoading	src/hooks/api/useTicketTypes.js	/^    ticketTypeLoading,$/;"	V
 ticketTypesApi	src/hooks/api/useTicketTypes.js	/^import * as ticketTypesApi from '..\/..\/services\/ticketsTypesApi';$/;"	I
