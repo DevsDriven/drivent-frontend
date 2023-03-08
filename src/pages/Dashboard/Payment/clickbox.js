@@ -55,4 +55,3 @@ export const Price = styled.div`
     color: #898989;
   }
 `;
-
