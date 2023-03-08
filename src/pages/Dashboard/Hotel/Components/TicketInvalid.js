@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export default function RenderNotValidTicket({ because }) {
-  console.log(because);
 
   return (
     <>
