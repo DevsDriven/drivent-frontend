@@ -25,7 +25,6 @@ export default function Hotel() {
     VerifyTicketIsInvalid(ticket);
   }, [ticket]);
 
-  console.log(ticket);
   return (
     <>
       <Title>Escolha de Hotel e quarto</Title>
