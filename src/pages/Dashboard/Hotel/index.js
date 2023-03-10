@@ -1,12 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import useTicket from '../../../hooks/api/useTicket';
 import styled from 'styled-components';
 import RenderNotValidTicket from './Components/TicketInvalid';
 import ListHotels from './Components/ListHotels';
+import HotelContext from '../../../contexts/HotelContext';
+import ListRooms from './Components/ListRooms';
 
 export default function Hotel() {
   const [ticketInvalid, setTicketInvalid] = useState({ invalid: true });
   const { ticket } = useTicket();
+  const { hotelSelected } = useContext(HotelContext);
+  const { hotelId } = hotelSelected;
 
   useEffect(() => {
     function VerifyTicketIsInvalid(ticket) {
@@ -38,9 +42,14 @@ export default function Hotel() {
       {ticketInvalid.invalid ? (
         <RenderNotValidTicket because={ticketInvalid.because} />
       ) : (
-        <Container>
-          <ListHotels/>
-        </Container>
+        <>
+          <Container>
+            <ListHotels/>
+          </Container>
+          {hotelId !== 0 && (
+            <ListRooms key={hotelId} hotelId={hotelId} />
+          )}
+        </>
       )}
     </>
   );
