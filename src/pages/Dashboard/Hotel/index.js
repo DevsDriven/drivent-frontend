@@ -17,24 +17,18 @@ export default function Hotel() {
       if (ticket === null) return;
       if (ticket.status !== 'PAID') {
         setTicketInvalid({ invalid: true, because: 'notPaid' });
-      }
-      else if (ticket.TicketType.includesHotel === false || ticket.TicketType.isRemote) {
+      } else if (ticket.TicketType.includesHotel === false || ticket.TicketType.isRemote) {
         setTicketInvalid({ invalid: true, because: 'hotelNotInclude' });
-      }
-      else{
+      } else {
         setTicketInvalid({ invalid: false });
       }
-    };
+    }
     VerifyTicketIsInvalid(ticket);
   }, [ticket]);
 
   if (ticket === null) {
-    return (
-      <>
-        Carregando...
-      </>
-    );
-  };
+    return <>Carregando...</>;
+  }
 
   return (
     <>
@@ -44,16 +38,14 @@ export default function Hotel() {
       ) : (
         <>
           <Container>
-            <ListHotels/>
+            <ListHotels />
           </Container>
-          {hotelId !== 0 && (
-            <ListRooms key={hotelId} hotelId={hotelId} />
-          )}
+          {hotelId !== 0 && <ListRooms key={hotelId} hotelId={hotelId} />}
         </>
       )}
     </>
   );
-};
+}
 
 const Container = styled.div`
    {

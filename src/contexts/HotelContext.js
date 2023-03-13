@@ -10,12 +10,17 @@ export function HotelProvider({ children }) {
     image: '',
     Rooms: [],
     accommodationTypes: 'Em construção',
-    vacancies: 'Em construção'
+    vacancies: 'Em construção',
+  });
+
+  const [roomSelected, setRoomSelected] = useState({
+    roomId: 0,
+    name: '',
   });
 
   return (
-    <HotelContext.Provider value={{ hotelSelected, setHotelSelected }}>
+    <HotelContext.Provider value={{ hotelSelected, setHotelSelected, roomSelected, setRoomSelected }}>
       {children}
     </HotelContext.Provider>
   );
-};
+}

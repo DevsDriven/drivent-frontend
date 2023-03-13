@@ -35,7 +35,7 @@ export default function PaymentGateway() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const payment = postPayment(state, paymentSelected);
+    postPayment(state, paymentSelected);
     const ticket = getTicket();
     setPaymentSelected({
       ...paymentSelected,
@@ -67,10 +67,6 @@ export default function PaymentGateway() {
     </>
   );
 }
-
-const TicketInfoContainer = styled.div``;
-
-const TicketReceipt = styled.div``;
 
 const PaymentContainer = styled.div`
   width: 100%;

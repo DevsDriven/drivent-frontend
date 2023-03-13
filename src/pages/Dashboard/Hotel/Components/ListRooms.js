@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import RoomOption from './RoomOption';
 import useRooms from '../../../../hooks/api/useRooms';
@@ -7,11 +7,10 @@ export default function ListRooms(props) {
   const { hotelId } = props;
   const { rooms } = useRooms(hotelId);
   const [roomsData, setRoomsData] = useState([]);
-  
+
   useEffect(() => {
     if (rooms) {
       setRoomsData(rooms.Rooms);
-      console.log(rooms);
     }
   }, [rooms]);
 
@@ -24,16 +23,18 @@ export default function ListRooms(props) {
             return <RoomOption key={index} optionData={optionData} />;
           })}
         </Container>
-      ) : <></>}
+      ) : (
+        <></>
+      )}
     </>
   );
 }
 
 const Title = styled.h1`
-  font-family: "Roboto", "sans-serif";
+  font-family: 'Roboto', 'sans-serif';
   margin-top: 33px;
   font-size: 20px;
-  color: #8E8E8E;
+  color: #8e8e8e;
 `;
 
 const Container = styled.div`
