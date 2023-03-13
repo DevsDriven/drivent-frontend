@@ -5,6 +5,7 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 Activities	src/pages/Dashboard/Activities/index.js	/^export default function Activities() {$/;"	E
+AlertWrapper	src/pages/Dashboard/Hotel/Components/TicketInvalid.js	/^const AlertWrapper = styled.div`$/;"	S
 AlertWrapper	src/pages/Dashboard/Payment/noenrollment.js	/^const AlertWrapper = styled.div`$/;"	S
 App	src/App.js	/^export default function App() {$/;"	E
 AuthLayout	src/layouts/Auth.js	/^export default function AuthLayout({ background, children }) {$/;"	E
@@ -12,10 +13,14 @@ Button	src/components/Dashboard/NavigationBar/NavigationButton.js	/^const Button
 Button	src/components/Form/Button.js	/^export default function Button({ variant='contained', children, ...props }) {$/;"	E
 CardContainer	src/components/Dashboard/Payment/CreditCard.js	/^const CardContainer = styled.div`$/;"	S
 Certificate	src/pages/Dashboard/Certificate/index.js	/^export default function Certificate() {$/;"	E
+Clickbox	src/pages/Dashboard/Hotel/Components/HotelOption.js	/^const Clickbox = styled.div`$/;"	S
+Clickbox	src/pages/Dashboard/Hotel/Components/RoomOption.js	/^const Clickbox = styled.div`$/;"	S
 Clickbox	src/pages/Dashboard/Payment/clickbox.js	/^export default function Clickbox({ optionData, type }) {$/;"	E
 ConfirmButton	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const ConfirmButton = styled.button`$/;"	S
 Container	src/components/Dashboard/NavigationBar/index.js	/^const Container = styled.div`$/;"	S
 Container	src/layouts/Dashboard.js	/^import { StyledContainer as Container } from '..\/components\/Auth';$/;"	I
+Container	src/pages/Dashboard/Hotel/Components/ListRooms.js	/^const Container = styled.div`$/;"	S
+Container	src/pages/Dashboard/Hotel/index.js	/^const Container = styled.div`$/;"	S
 Container	src/pages/Dashboard/Payment/Components/Accommodations.js	/^export const Container = styled.div`$/;"	E
 Container	src/pages/Dashboard/Payment/clickbox.js	/^export const Container = styled.div`$/;"	E
 Container	src/pages/Dashboard/Payment/index.js	/^export const Container = styled.div`$/;"	E
@@ -42,10 +47,16 @@ FormWrapper	src/components/PersonalInformationForm/FormWrapper.js	/^export const
 Grid	src/components/Splash.js	/^const Grid = styled.div`$/;"	S
 Grid	src/pages/Countdown/Timer.js	/^const Grid = styled.div`$/;"	S
 Hotel	src/pages/Dashboard/Hotel/index.js	/^export default function Hotel() {$/;"	E
+HotelName	src/pages/Dashboard/Hotel/Components/HotelOption.js	/^const HotelName = styled.p`$/;"	S
+HotelOption	src/pages/Dashboard/Hotel/Components/HotelOption.js	/^export default function HotelOption({ optionData }) {$/;"	E
+HotelProvider	src/contexts/HotelContext.js	/^export function HotelProvider({ children }) {$/;"	E
+InfoBox	src/pages/Dashboard/Hotel/Components/HotelOption.js	/^const InfoBox = styled.div`$/;"	S
 Input	src/components/Form/Input.js	/^export default function Input({ mask = '', maskChar = '', formatChars, variant = 'outlined', value='', onChange = () => 0, ...props }) {$/;"	E
 InputWrapper	src/components/PersonalInformationForm/InputWrapper.js	/^export const InputWrapper = styled.div`$/;"	E
 Label	src/components/Auth/index.js	/^export const Label = styled.h1`$/;"	E
 Label	src/pages/Countdown/Timer.js	/^const Label = styled.div`$/;"	S
+ListHotels	src/pages/Dashboard/Hotel/Components/ListHotels.js	/^export default function ListHotels() {$/;"	E
+ListRooms	src/pages/Dashboard/Hotel/Components/ListRooms.js	/^export default function ListRooms(props) {$/;"	E
 Message	src/components/Splash.js	/^const Message = styled.div`$/;"	S
 MultiSelect	src/components/Form/Select.js	/^export default function MultiSelect({$/;"	E
 Name	src/pages/Dashboard/Payment/clickbox.js	/^export const Name = styled.div`$/;"	E
@@ -54,6 +65,7 @@ NavigationBar	src/components/Dashboard/NavigationBar/index.js	/^export default f
 NavigationButton	src/components/Dashboard/NavigationBar/NavigationButton.js	/^export default function NavigationButton({ active, children }) {$/;"	E
 NoEnrollment	src/pages/Dashboard/Payment/noenrollment.js	/^export default function NoEnrollment() {$/;"	E
 Options	src/pages/Dashboard/Payment/options.js	/^export default function Options({ data }) {$/;"	E
+OptionsContainer	src/pages/Dashboard/Hotel/Components/ListHotels.js	/^const OptionsContainer = styled.div`$/;"	S
 Payment	src/pages/Dashboard/Payment/index.js	/^export default function Payment() {$/;"	E
 PaymentContainer	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^const PaymentContainer = styled.div`$/;"	S
 PaymentForm	src/components/Dashboard/Payment/CreditCard.js	/^const PaymentForm = (props) => {$/;"	F
@@ -67,8 +79,13 @@ ProtectedRouteGuard	src/App.js	/^function ProtectedRouteGuard({ children }) {$/;
 ReceiptContainer	src/pages/Dashboard/Payment/index.js	/^const ReceiptContainer = styled.div`$/;"	S
 ReceiptTextConfirm	src/pages/Dashboard/Payment/index.js	/^const ReceiptTextConfirm = styled.div`$/;"	S
 RenderAccommodation	src/pages/Dashboard/Payment/Components/Accommodations.js	/^export default function RenderAccommodation({ value, data }) {$/;"	E
+RenderNotValidTicket	src/pages/Dashboard/Hotel/Components/TicketInvalid.js	/^export default function RenderNotValidTicket({ because }) {$/;"	E
 RenderOptionsAccommodation	src/pages/Dashboard/Payment/Components/Accommodations.js	/^  function RenderOptionsAccommodation({ data, paymentSelected }) {$/;"	F
 ReserveConfirm	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^export default function ReserveConfirm({ value }) {$/;"	E
+RoomCapacity	src/pages/Dashboard/Hotel/Components/RoomOption.js	/^const RoomCapacity = styled.div``;$/;"	S
+RoomNumber	src/pages/Dashboard/Hotel/Components/RoomOption.js	/^const RoomNumber = styled.h1``;$/;"	S
+RoomOption	src/pages/Dashboard/Hotel/Components/RoomOption.js	/^export default function RoomOption({ optionData }) {$/;"	E
+Rooms	src/contexts/HotelContext.js	/^    Rooms: [],$/;"	P
 Route	src/App.js	/^  Route,$/;"	V
 Router	src/App.js	/^  BrowserRouter as Router,$/;"	I
 Routes	src/App.js	/^  Routes,$/;"	V
@@ -98,14 +115,19 @@ TicketReceipt	src/pages/Dashboard/Payment/Components/TicketReceipt.js	/^export d
 TicketReceiptContainer	src/pages/Dashboard/Payment/Components/TicketReceipt.js	/^const TicketReceiptContainer = styled.div`$/;"	S
 Timer	src/pages/Countdown/Timer.js	/^export default function Timer({ time, onZero = () => 0 }) {$/;"	E
 Title	src/components/Auth/index.js	/^export const Title = styled.h1`$/;"	E
+Title	src/pages/Dashboard/Hotel/Components/ListRooms.js	/^const Title = styled.h1`$/;"	S
+Title	src/pages/Dashboard/Hotel/index.js	/^const Title = styled.div`$/;"	S
 Title	src/pages/Dashboard/Payment/index.js	/^export const Title = styled.div`$/;"	E
 Title	src/pages/Dashboard/Payment/noenrollment.js	/^const Title = styled.div`$/;"	S
 UserProvider	src/contexts/UserContext.js	/^export function UserProvider({ children }) {$/;"	E
+VerifyTicketIsInvalid	src/pages/Dashboard/Hotel/index.js	/^    function VerifyTicketIsInvalid(ticket) {$/;"	F
 accommodationData	src/pages/Dashboard/Payment/index.js	/^  const [accommodationData, setAccommodationData] = useState({$/;"	V
 accommodationOptionsFilter	src/pages/Dashboard/Payment/index.js	/^    const accommodationOptionsFilter = [];$/;"	A
 accommodationsFilter	src/pages/Dashboard/Payment/index.js	/^  function accommodationsFilter() {$/;"	F
 act	src/hooks/api/useCep.js	/^    act: getCep,$/;"	P
 act	src/hooks/api/useEnrollment.js	/^    act: getEnrollment$/;"	P
+act	src/hooks/api/useHotels.js	/^    act: getManyHotels$/;"	P
+act	src/hooks/api/useRooms.js	/^    act: getManyRooms,$/;"	P
 act	src/hooks/api/useSaveEnrollment.js	/^    act: saveEnrollment$/;"	P
 act	src/hooks/api/useSignIn.js	/^    act: signIn$/;"	P
 act	src/hooks/api/useSignUp.js	/^    act: signUp,$/;"	P
@@ -119,6 +141,7 @@ authApi	src/hooks/api/useSignIn.js	/^import * as authApi from '..\/..\/services\
 birthday	src/components/PersonalInformationForm/FormValidations.js	/^  birthday: {$/;"	P
 birthday	src/components/PersonalInformationForm/index.js	/^      birthday: null,$/;"	P
 body	src/services/paymentApi.js	/^  const body = {$/;"	O
+capacity	src/pages/Dashboard/Hotel/Components/RoomOption.js	/^  const { name, capacity } = optionData;$/;"	V
 cardData	src/services/paymentApi.js	/^    cardData$/;"	V
 cardData	src/services/paymentApi.js	/^  const cardData = {$/;"	O
 cep	src/components/PersonalInformationForm/FormValidations.js	/^  cep: {$/;"	P
@@ -141,6 +164,8 @@ data	src/components/PersonalInformationForm/index.js	/^    data,$/;"	V
 data	src/hooks/api/useCep.js	/^    data: cep,$/;"	P
 data	src/hooks/api/useEnrollment.js	/^    data: enrollment,$/;"	P
 data	src/hooks/api/useEvent.js	/^    data: event,$/;"	P
+data	src/hooks/api/useHotels.js	/^    data: hotels,$/;"	P
+data	src/hooks/api/useRooms.js	/^    data: rooms,$/;"	P
 data	src/hooks/api/useTicket.js	/^    data: ticket,$/;"	P
 data	src/hooks/api/useTicketTypes.js	/^    data: ticketsType,$/;"	P
 data	src/hooks/useAsync.js	/^    data,$/;"	V
@@ -164,6 +189,8 @@ enrollmentLoading	src/hooks/api/useEnrollment.js	/^    enrollmentLoading,$/;"	V
 error	src/hooks/api/useCep.js	/^    error: cepError,$/;"	P
 error	src/hooks/api/useEnrollment.js	/^    error: enrollmentError,$/;"	P
 error	src/hooks/api/useEvent.js	/^    error: eventError,$/;"	P
+error	src/hooks/api/useHotels.js	/^    error: hotelsError,$/;"	P
+error	src/hooks/api/useRooms.js	/^    error: roomsError,$/;"	P
 error	src/hooks/api/useSaveEnrollment.js	/^    error: saveEnrollmentError,$/;"	P
 error	src/hooks/api/useSignIn.js	/^    error: signInError,$/;"	P
 error	src/hooks/api/useSignUp.js	/^    error: signUpError,$/;"	P
@@ -192,6 +219,8 @@ formData	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^      formDa
 getCep	src/components/PersonalInformationForm/index.js	/^  const { getCep } = useCep();$/;"	V
 getCep	src/hooks/api/useCep.js	/^    getCep,$/;"	V
 getEnrollment	src/hooks/api/useEnrollment.js	/^    getEnrollment$/;"	V
+getManyHotels	src/hooks/api/useHotels.js	/^    getManyHotels$/;"	V
+getManyRooms	src/hooks/api/useRooms.js	/^    getManyRooms,$/;"	V
 getTicket	src/hooks/api/useTicket.js	/^    getTicket,$/;"	V
 getTicket	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const { getTicket } = useTicket();$/;"	V
 getTicket	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^  const { getTicket } = useTicket();$/;"	V
@@ -211,9 +240,23 @@ handleSubmit	src/hooks/useForm.js	/^    handleSubmit,$/;"	V
 handleSubmit	src/hooks/useForm.js	/^  const handleSubmit = async(event) => {$/;"	F
 handleSubmit	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const handleSubmit = (e) => {$/;"	F
 headers	src/services/enrollmentApi.js	/^    headers: {$/;"	P
+headers	src/services/hotelsApi.js	/^    headers: {$/;"	P
 headers	src/services/paymentApi.js	/^    headers: {$/;"	P
+headers	src/services/roomsApi.js	/^    headers: {$/;"	P
 headers	src/services/ticketApi.js	/^    headers: {$/;"	P
 headers	src/services/ticketsTypesApi.js	/^    headers: {$/;"	P
+hotelId	src/contexts/HotelContext.js	/^    hotelId: 0,$/;"	P
+hotelId	src/pages/Dashboard/Hotel/Components/ListRooms.js	/^  const { hotelId } = props;$/;"	V
+hotelId	src/pages/Dashboard/Hotel/index.js	/^  const { hotelId } = hotelSelected;$/;"	V
+hotelSelected	src/contexts/HotelContext.js	/^  const [hotelSelected, setHotelSelected] = useState({$/;"	V
+hotelSelected	src/pages/Dashboard/Hotel/Components/HotelOption.js	/^  const { hotelSelected, setHotelSelected } = useContext(HotelContext);$/;"	V
+hotelSelected	src/pages/Dashboard/Hotel/index.js	/^  const { hotelSelected } = useContext(HotelContext);$/;"	V
+hotels	src/hooks/api/useHotels.js	/^    hotels,$/;"	V
+hotels	src/pages/Dashboard/Hotel/Components/ListHotels.js	/^  const { hotels } = useHotels();$/;"	V
+hotelsApi	src/hooks/api/useHotels.js	/^import * as hotelsApi from '..\/..\/services\/hotelsApi';$/;"	I
+hotelsData	src/pages/Dashboard/Hotel/Components/ListHotels.js	/^  const [hotelsData, setHotelsData] = useState([]);$/;"	V
+hotelsError	src/hooks/api/useHotels.js	/^    hotelsError,$/;"	V
+hotelsLoading	src/hooks/api/useHotels.js	/^    hotelsLoading,$/;"	V
 hours	src/pages/Countdown/Timer.js	/^      let { days, hours, minutes, seconds } = timeRemaining;$/;"	V
 hours	src/pages/Countdown/Timer.js	/^    hours,$/;"	V
 id	src/components/Form/Select.js	/^  id,$/;"	V
@@ -231,6 +274,8 @@ label	src/components/Form/Select.js	/^  label,$/;"	V
 loading	src/hooks/api/useCep.js	/^    loading: cepLoading,$/;"	P
 loading	src/hooks/api/useEnrollment.js	/^    loading: enrollmentLoading,$/;"	P
 loading	src/hooks/api/useEvent.js	/^    loading: eventLoading,$/;"	P
+loading	src/hooks/api/useHotels.js	/^    loading: hotelsLoading,$/;"	P
+loading	src/hooks/api/useRooms.js	/^    loading: roomsLoading,$/;"	P
 loading	src/hooks/api/useSaveEnrollment.js	/^    loading: saveEnrollmentLoading,$/;"	P
 loading	src/hooks/api/useSignIn.js	/^    loading: signInLoading,$/;"	P
 loading	src/hooks/api/useSignUp.js	/^    loading: signUpLoading,$/;"	P
@@ -248,6 +293,7 @@ minutes	src/pages/Countdown/Timer.js	/^    minutes,$/;"	V
 name	src/components/Form/Select.js	/^  name,$/;"	V
 name	src/components/PersonalInformationForm/FormValidations.js	/^  name: {$/;"	P
 name	src/components/PersonalInformationForm/index.js	/^    const { name, value } = event.target;$/;"	V
+name	src/pages/Dashboard/Hotel/Components/RoomOption.js	/^  const { name, capacity } = optionData;$/;"	V
 name	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^    const { name, value } = evt.target;$/;"	V
 neighborhood	src/components/PersonalInformationForm/FormValidations.js	/^  neighborhood: {$/;"	P
 newData	src/components/PersonalInformationForm/index.js	/^      const newData = {$/;"	O
@@ -275,6 +321,12 @@ printWidth	.prettierrc.js	/^  printWidth: 120,$/;"	P
 request	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^  async function request(paramsTicketTypeId) {$/;"	F
 required	src/components/Dashboard/Payment/CreditCard.js	/^            required$/;"	V
 required	src/components/Dashboard/Payment/CreditCard.js	/^          required$/;"	V
+rooms	src/hooks/api/useRooms.js	/^    rooms,$/;"	V
+rooms	src/pages/Dashboard/Hotel/Components/ListRooms.js	/^  const { rooms } = useRooms(hotelId);$/;"	V
+roomsApi	src/hooks/api/useRooms.js	/^import * as roomsApi from '..\/..\/services\/roomsApi';$/;"	I
+roomsData	src/pages/Dashboard/Hotel/Components/ListRooms.js	/^  const [roomsData, setRoomsData] = useState([]);$/;"	V
+roomsError	src/hooks/api/useRooms.js	/^    roomsError,$/;"	V
+roomsLoading	src/hooks/api/useRooms.js	/^    roomsLoading,$/;"	V
 saveEnrollment	src/components/PersonalInformationForm/index.js	/^  const { saveEnrollmentLoading, saveEnrollment } = useSaveEnrollment();$/;"	V
 saveEnrollment	src/hooks/api/useSaveEnrollment.js	/^    saveEnrollment$/;"	V
 saveEnrollmentError	src/hooks/api/useSaveEnrollment.js	/^    saveEnrollmentError,$/;"	V
@@ -295,6 +347,9 @@ setEmail	src/pages/Enroll/index.js	/^  const [email, setEmail] = useState('');$/
 setEmail	src/pages/SignIn/index.js	/^  const [email, setEmail] = useState('');$/;"	V
 setError	src/hooks/useAsync.js	/^  const [error, setError] = useState(null);$/;"	V
 setErrors	src/hooks/useForm.js	/^  const [errors, setErrors] = useState({});$/;"	V
+setHotelSelected	src/contexts/HotelContext.js	/^  const [hotelSelected, setHotelSelected] = useState({$/;"	V
+setHotelSelected	src/pages/Dashboard/Hotel/Components/HotelOption.js	/^  const { hotelSelected, setHotelSelected } = useContext(HotelContext);$/;"	V
+setHotelsData	src/pages/Dashboard/Hotel/Components/ListHotels.js	/^  const [hotelsData, setHotelsData] = useState([]);$/;"	V
 setLoading	src/hooks/useAsync.js	/^  const [loading, setLoading] = useState(immediate);$/;"	V
 setLoadingButton	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^  const [loadingButton, setLoadingButton] = useState(false);$/;"	V
 setParamsTicketTypeId	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^  const [paramsTicketTypeId, setParamsTicketTypeId] = useState(paymentSelected.ticket.ticketTypeId);$/;"	V
@@ -305,11 +360,13 @@ setPaymentSelected	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  
 setPaymentSelected	src/pages/Dashboard/Payment/Components/ReserveComfirm.js	/^  const { paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
 setPaymentSelected	src/pages/Dashboard/Payment/clickbox.js	/^  const { paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
 setPaymentSelected	src/pages/Dashboard/Payment/index.js	/^  const { paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
+setRoomsData	src/pages/Dashboard/Hotel/Components/ListRooms.js	/^  const [roomsData, setRoomsData] = useState([]);$/;"	V
 setState	src/contexts/PaymentContext.js	/^  const [state, setState] = useState({$/;"	V
 setState	src/pages/Dashboard/Payment/Components/PaymentGateway.js	/^  const { state, setState, paymentSelected, setPaymentSelected } = useContext(PaymentContext);$/;"	V
 setStoredValue	src/hooks/useLocalStorage.js	/^  const [storedValue, setStoredValue] = useState(() => {$/;"	V
 setTicketData	src/pages/Dashboard/Payment/index.js	/^  const [ticketData, setTicketData] = useState({$/;"	V
 setTicketInfo	src/pages/Dashboard/Payment/index.js	/^  const [ticketInfo, setTicketInfo] = useState({});$/;"	V
+setTicketInvalid	src/pages/Dashboard/Hotel/index.js	/^  const [ticketInvalid, setTicketInvalid] = useState({ invalid: true });$/;"	V
 setTicketStatus	src/pages/Dashboard/Payment/index.js	/^  const [ticketStatus, setTicketStatus] = useState({ ticketStatus: 'none' });$/;"	V
 setTimeRemaining	src/pages/Countdown/Timer.js	/^  const [timeRemaining, setTimeRemaining] = useState(diffToDate(time));$/;"	V
 setUserData	src/contexts/UserContext.js	/^  const [userData, setUserData] = useLocalStorage('userData', {});$/;"	V
@@ -335,6 +392,7 @@ submit	src/pages/SignIn/index.js	/^  async function submit(event) {$/;"	F
 tabWidth	.prettierrc.js	/^  tabWidth: 2,$/;"	P
 tickesTypesApi	src/hooks/api/useTicketUser.js	/^import * as tickesTypesApi from '..\/..\/services\/ticketsTypesApi';$/;"	I
 ticket	src/hooks/api/useTicket.js	/^    ticket,$/;"	V
+ticket	src/pages/Dashboard/Hotel/index.js	/^  const { ticket } = useTicket();$/;"	V
 ticket	src/pages/Dashboard/Payment/Components/TicketReceipt.js	/^  const { ticket } = props;$/;"	V
 ticketApi	src/hooks/api/useTicket.js	/^import * as ticketApi from '..\/..\/services\/ticketApi';$/;"	I
 ticketData	src/pages/Dashboard/Payment/index.js	/^  const [ticketData, setTicketData] = useState({$/;"	V
@@ -342,6 +400,7 @@ ticketError	src/hooks/api/useTicket.js	/^    ticketError,$/;"	V
 ticketId	src/contexts/PaymentContext.js	/^    ticketId: null$/;"	P
 ticketId	src/services/paymentApi.js	/^    ticketId,$/;"	V
 ticketInfo	src/pages/Dashboard/Payment/index.js	/^  const [ticketInfo, setTicketInfo] = useState({});$/;"	V
+ticketInvalid	src/pages/Dashboard/Hotel/index.js	/^  const [ticketInvalid, setTicketInvalid] = useState({ invalid: true });$/;"	V
 ticketLoading	src/hooks/api/useTicket.js	/^    ticketLoading,$/;"	V
 ticketOptionsFilter	src/pages/Dashboard/Payment/index.js	/^    const ticketOptionsFilter = [];$/;"	A
 ticketStatus	src/pages/Dashboard/Payment/index.js	/^  const [ticketStatus, setTicketStatus] = useState({ ticketStatus: 'none' });$/;"	V
@@ -358,9 +417,11 @@ useCep	src/hooks/api/useCep.js	/^export default function useCep() {$/;"	E
 useEnrollment	src/hooks/api/useEnrollment.js	/^export default function useEnrollment() {$/;"	E
 useEvent	src/hooks/api/useEvent.js	/^export default function useEvent() {$/;"	E
 useForm	src/hooks/useForm.js	/^export const useForm = (options) => {$/;"	E
+useHotels	src/hooks/api/useHotels.js	/^export default function useHotels() {$/;"	E
 useIsDateAfter	src/hooks/useIsDateAfter.js	/^export default function useIsDateAfter(date) {$/;"	E
 useLocalStorage	src/hooks/useLocalStorage.js	/^export default function useLocalStorage(key, initialValue) {$/;"	E
 usePayment	src/hooks/api/usePayment.js	/^export default function usePayment() {$/;"	E
+useRooms	src/hooks/api/useRooms.js	/^export default function useRooms(hotelId) {$/;"	E
 useSaveEnrollment	src/hooks/api/useSaveEnrollment.js	/^export default function useSaveEnrollment() {$/;"	E
 useSignUp	src/hooks/api/useSignIn.js	/^export default function useSignUp() {$/;"	E
 useSignUp	src/hooks/api/useSignUp.js	/^export default function useSignUp() {$/;"	E
