@@ -26,7 +26,6 @@ export default function ListRooms(props) {
       return;
     }
     const booking = await postBooking(roomId);
-    console.log(booking);
     const { bookingId } = booking;
     setBooking({
       bookingId: bookingId,

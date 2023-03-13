@@ -6,6 +6,7 @@ export default function RoomOption({ optionData }) {
   const { name, capacity, Booking } = optionData;
   const { roomSelected, setRoomSelected } = useContext(HotelContext);
   const [selected, setSelected] = useState(false);
+  const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
     if (roomSelected.roomId === optionData.id) {
@@ -14,6 +15,12 @@ export default function RoomOption({ optionData }) {
       setSelected(false);
     }
   }, [roomSelected]);
+
+  useEffect(() => {
+    if (Booking.length === capacity) {
+      setDisabled(true);
+    }
+  }, [disabled]);
 
   function RoomCapacity() {
     let bookings = Booking.length;
@@ -38,7 +45,7 @@ export default function RoomOption({ optionData }) {
     return (
       <IconContainer selected={selected}>
         {roomCount.map((count) => (
-          <IconBox color={count}>
+          <IconBox color={count} disabled={disabled}>
             {count === 'booked' && <ion-icon name="person"></ion-icon>}
             {count === 'free' && <ion-icon name="person-outline"></ion-icon>}
             {count === 'selected' && <ion-icon name="person"></ion-icon>}
@@ -57,7 +64,7 @@ export default function RoomOption({ optionData }) {
   }
 
   return (
-    <Clickbox onClick={selectRoom} color={optionData.id}>
+    <Clickbox onClick={selectRoom} selected={selected} disabled={disabled}>
       <RoomNumber>{name}</RoomNumber>
       <RoomCapacity key={optionData.id} />
     </Clickbox>
@@ -76,7 +83,8 @@ const Clickbox = styled.div`
   align-items: center;
   border: 1px solid #cecece;
   border-radius: 10px;
-  background-color: $(props => props.color === roomSelected.roomId ? '#FFEED2': '#FFFFFF');
+  background-color: ${(props) => (props.selected ? '#FFEED2' : props.disabled ? '#E9E9E9' : '#FFFFFF')};
+  pointer-events: ${(props) => props.disabled ? 'none' : 'auto'};
 `;
 
 const RoomNumber = styled.h1``;
@@ -87,5 +95,5 @@ const IconContainer = styled.div`
 
 const IconBox = styled.div`
   margin-right: 5px;
-  color: ${(props) => (props.color === 'selected' ? '#FF4791' : '#000000')};
+  color: ${(props) => (props.color === 'selected' ? '#FF4791' : props.disabled ? '#8C8C8C' : '#000000')};
 `;
