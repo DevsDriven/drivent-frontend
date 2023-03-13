@@ -86,5 +86,6 @@ const IconContainer = styled.div`
 `;
 
 const IconBox = styled.div`
+  margin-right: 5px;
   color: ${(props) => (props.color === 'selected' ? '#FF4791' : '#000000')};
 `;

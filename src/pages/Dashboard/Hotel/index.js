@@ -5,12 +5,15 @@ import RenderNotValidTicket from './Components/TicketInvalid';
 import ListHotels from './Components/ListHotels';
 import HotelContext from '../../../contexts/HotelContext';
 import ListRooms from './Components/ListRooms';
+import useBooking from '../../../hooks/api/useBooking';
 
 export default function Hotel() {
   const [ticketInvalid, setTicketInvalid] = useState({ invalid: true });
   const { ticket } = useTicket();
-  const { hotelSelected } = useContext(HotelContext);
+  const { hotelSelected, booking, setBooking } = useContext(HotelContext);
   const { hotelId } = hotelSelected;
+  const [isBooking, setIsBooking] = useState(false);
+  const { getBooking } = useBooking();
 
   useEffect(() => {
     function VerifyTicketIsInvalid(ticket) {
@@ -26,25 +29,47 @@ export default function Hotel() {
     VerifyTicketIsInvalid(ticket);
   }, [ticket]);
 
+  useEffect(async() => {
+    const userBooking = await getBooking();
+    if (!userBooking) {
+      return;
+    }
+    const bookingId = userBooking.id; 
+    if (bookingId !== booking.bookingId) {
+      setIsBooking(true);
+      setBooking({ bookingId });
+    }
+  }, [booking]);
+
   if (ticket === null) {
     return <>Carregando...</>;
   }
 
-  return (
-    <>
-      <Title>Escolha de Hotel e quarto</Title>
-      {ticketInvalid.invalid ? (
-        <RenderNotValidTicket because={ticketInvalid.because} />
-      ) : (
-        <>
-          <Container>
-            <ListHotels />
-          </Container>
-          {hotelId !== 0 && <ListRooms key={hotelId} hotelId={hotelId} />}
-        </>
-      )}
-    </>
-  );
+  if (isBooking === false) {
+    return (
+      <>
+        <Title>Escolha de Hotel e quarto</Title>
+        {ticketInvalid.invalid ? (
+          <RenderNotValidTicket because={ticketInvalid.because} />
+        ) : (
+          <>
+            <Container>
+              <ListHotels />
+            </Container>
+            {hotelId !== 0 && <ListRooms key={hotelId} hotelId={hotelId} setIsBooking={setIsBooking} />}
+          </>
+        )}
+      </>
+    );
+  } else {
+    return (
+      <>
+        <Title>Você já escolheu seu quarto </Title>
+        <h1>Container do resumo do booking</h1>
+        <button>Trocar de quarto</button>
+      </>
+    );
+  }
 }
 
 const Container = styled.div`
