@@ -17,8 +17,9 @@ export default function Hotel() {
 
   useEffect(() => {
     function VerifyTicketIsInvalid(ticket) {
-      if (ticket === null) return;
-      if (ticket.status !== 'PAID') {
+      if (ticket === null) {
+        setTicketInvalid({ invalid: true, because: 'notPaid' });
+      } else if (ticket.status !== 'PAID') {
         setTicketInvalid({ invalid: true, because: 'notPaid' });
       } else if (ticket.TicketType.includesHotel === false || ticket.TicketType.isRemote) {
         setTicketInvalid({ invalid: true, because: 'hotelNotInclude' });
@@ -40,10 +41,6 @@ export default function Hotel() {
       setBooking({ bookingId });
     }
   }, [booking]);
-
-  if (ticket === null) {
-    return <>Carregando...</>;
-  }
 
   if (isBooking === false) {
     return (
